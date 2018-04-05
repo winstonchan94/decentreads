@@ -53,10 +53,28 @@ nav {
   display: flex;
   position: absolute;
   right: 60px;
-  bottom: 1px; 
+  bottom: -5px;
   align-items: center;
 }
 
 .logged-in-stuff li {
   padding: 5px;
+}
+
+.logout-button {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #382110;
+  border-radius: 3px;
+  margin-left: 5px;
+  text-decoration: none;
+  background: #382110;
+  color: white;
+  cursor: pointer;
+  font-family: "Merriweather";
+}
+
+.logout-button:hover {
+  background: #654321;
+  border: 1px solid #654321;
 }
