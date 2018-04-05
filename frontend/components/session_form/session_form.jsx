@@ -46,7 +46,6 @@ class SessionForm extends React.Component {
             onChange={this.update('name')}
             className="session-input"
           />
-          <br/>
         </label>
       );
       this.alternatePrompt = (
@@ -66,14 +65,17 @@ class SessionForm extends React.Component {
           <div className="session-form">
             <br/>
             {this.nameField}
+            <br/>
             <label>Email
               <br/>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="session-input"
+                id='email'
               />
             </label>
+
             <br/>
             <label>Password
               <br/>
