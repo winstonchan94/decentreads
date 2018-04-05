@@ -5,10 +5,13 @@ const logo = (
   <Link className="nav-logo" to="/"><h3>DecentReads</h3></Link>
 );
 
-const sessionLinks = () => (
+const sessionLinks = (demoLogin) => (
   <nav className="logged-out-nav">
     { logo }
     <ul className="logged-out-buttons" >
+
+        <button onClick={demoLogin} className="demo-button">DEMO</button>
+
       <li>
         <Link className="log-button" to="/login">Log In</Link>
       </li>
@@ -33,8 +36,8 @@ const personalGreeting = (currentUser, logout) => (
 	</nav>
 );
 
-const NavBar = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+const NavBar = ({ currentUser, logout, demoLogin }) => (
+  currentUser ? personalGreeting(currentUser, logout) : sessionLinks(demoLogin)
 );
 
 export default NavBar;
