@@ -60,11 +60,12 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
-          {this.props.formType} DecentReads
+          <h3>{this.props.formType} DecentReads</h3>
           <br/>
           {this.renderErrors()}
           <div className="session-form">
             <br/>
+            {this.nameField}
             <label>Email
               <br/>
               <input type="text"
@@ -74,7 +75,6 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            {this.nameField}
             <label>Password
               <br/>
               <input type="password"
@@ -84,13 +84,13 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value={this.props.formTypeShort} />
             <br/>
-            <ul className="form-bottom">
-              <li>{this.alternatePrompt}</li>
-              <li>{this.props.navLink}</li>
-            </ul>
           </div>
+          <ul className="form-bottom">
+            <li>{this.alternatePrompt}</li>
+            <li>{this.props.navLink}</li>
+          </ul>
         </form>
       </div>
     );

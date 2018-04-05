@@ -16,13 +16,6 @@
   text-align: center;
 }
 
-.session-form {
-  align-items: center;
-}
-
-.session-form label {
-
-}
 
 .form-bottom {
   display: flex;
@@ -33,4 +26,8 @@
 
 .form-bottom li {
   padding: 5px;
+}
+
+label {
+  text-align: left;
 }
