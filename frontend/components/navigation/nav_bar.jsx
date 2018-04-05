@@ -10,10 +10,10 @@ const sessionLinks = () => (
     { logo }
     <ul className="logged-out-buttons" >
       <li>
-        <Link to="/login">Log In</Link>
+        <Link className="log-button" to="/login">Log In</Link>
       </li>
       <li>
-        <Link to="/signup">Sign up</Link>
+        <Link className="log-button" to="/signup">Sign up</Link>
       </li>
     </ul>
   </nav>
