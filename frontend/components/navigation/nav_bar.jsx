@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const logo = (
-  <h1 className="nav-logo">DecentReads</h1>
+  <Link className="nav-logo" to="/"><h3>DecentReads</h3></Link>
 );
 
 const sessionLinks = () => (

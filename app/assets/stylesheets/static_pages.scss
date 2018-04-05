@@ -18,6 +18,8 @@ nav {
 .nav-logo {
   font-size: 28px;
   margin-left: 140px;
+  text-decoration: none;
+  color: #382110;
 }
 
 .logged-out-buttons {
@@ -25,7 +27,7 @@ nav {
   display: flex;
   position: absolute;
   right: 60px;
-  bottom: 7px;
+  bottom: 20px;
 }
 
 .logged-out-buttons li {
@@ -53,7 +55,7 @@ nav {
   display: flex;
   position: absolute;
   right: 60px;
-  bottom: -5px;
+  bottom: 5px;
   align-items: center;
 }
 
