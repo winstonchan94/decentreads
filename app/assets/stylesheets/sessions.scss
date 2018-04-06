@@ -48,3 +48,28 @@
 label {
   text-align: left;
 }
+
+.session-input {
+  padding: 10px 5px;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+
+.session-submit {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  text-decoration: none;
+  background: #F4F1EA;
+  align-self: left;
+  cursor: pointer;
+  font-family: "Merriweather";
+  color: #382110;
+}
+
+.session-submit:hover {
+  background: #ebe6d9;
+}
