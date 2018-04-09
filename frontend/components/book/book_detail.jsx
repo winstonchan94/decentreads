@@ -3,7 +3,7 @@ import React from 'react';
 //will need to destructure once reviews
 const BookDetail = ({book}) => {
   return(
-    <div>
+    <div className='book-details'>
       <header>
         <h2 className="book-title">{book.title}</h2>
         <h3 className="book-author">by {book.author.name}</h3>

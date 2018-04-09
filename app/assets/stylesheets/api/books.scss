@@ -1,3 +1,18 @@
 // Place all the styles related to the api/books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.book-details {
+  align-self: center;
+  width: 30%;
+  margin-left: 30%;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.book-author {
+  font-size: 18px;
+}
+
+.book-description {
+  line-height: 20px;
+  font-size: 18px;
+}

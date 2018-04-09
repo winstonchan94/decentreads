@@ -27,6 +27,7 @@ const App = () => {
         <Route exact path="/" component={BookIndexContainer} />
         <Route path="/books/:bookId" component={BookShowContainer} />
       </Switch>
+      <footer><li>© 2018 DecentReads Inc</li></footer>
     </div>
   );
 };
