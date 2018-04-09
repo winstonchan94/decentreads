@@ -2,6 +2,8 @@ import React from 'react';
 import NavBarContainer from './navigation/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
+import BookShowContainer from './book/book_show_container';
+import BookIndexContainer from './book/book_index_container';
 import { Provider } from 'react-redux';
 import {
   Route,
@@ -22,6 +24,8 @@ const App = () => {
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route exact path="/" component={BookIndexContainer} />
+        <Route path="/books/:bookId" component={BookShowContainer} />
       </Switch>
     </div>
   );

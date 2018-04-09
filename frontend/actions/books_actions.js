@@ -14,13 +14,13 @@ export const receiveBook = book => ({
   book,
 });
 
-export const fetchBooks = () => dispatch => (
+export const requestBooks = () => dispatch => (
   APIUtil.fetchBooks().then(books => (
     dispatch(receiveBooks(books))
   ))
 );
 
-export const fetchBook = bookId => dispatch => (
+export const requestBook = bookId => dispatch => (
   APIUtil.fetchBook(bookId).then(book => (
     dispatch(receiveBook(book))
   ))
