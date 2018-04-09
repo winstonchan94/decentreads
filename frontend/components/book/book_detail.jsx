@@ -1,8 +1,7 @@
 import React from 'react';
 
 //will need to destructure once reviews
-const BookDetail = (book) => {
-  debugger;
+const BookDetail = ({book}) => {
   return(
     <div>
       <header>
