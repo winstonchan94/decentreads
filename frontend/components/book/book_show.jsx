@@ -13,7 +13,16 @@ class BookShow extends React.Component {
     this.props.requestBook(this.props.bookId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.bookId !== nextProps.bookId) {
+      this.props.requestBook(nextProps.bookId);
+    }
+  }
+
   render() {
+    if (!this.props.book) {
+      return (<p>loading!</p>);
+    } else {
     return(
       <div className="single-book-show">
         <Link to="/">Back to books</Link>
@@ -21,7 +30,7 @@ class BookShow extends React.Component {
           <BookDetail book={this.props.book} />
         </div>
       </div>
-    );
+    );}
   }
 }
 

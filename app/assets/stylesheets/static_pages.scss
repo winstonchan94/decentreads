@@ -9,6 +9,7 @@ nav {
   justify-content: space-between;
   position: relative;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, .4);
+  height: 50px;
 }
 
 .current-user {
@@ -27,7 +28,6 @@ nav {
   display: flex;
   position: absolute;
   right: 60px;
-  bottom: 20px;
 }
 
 .logged-out-buttons li {
@@ -55,7 +55,6 @@ nav {
   display: flex;
   position: absolute;
   right: 60px;
-  bottom: 7px;
   align-items: center;
 }
 
@@ -105,8 +104,11 @@ footer {
   background: #F4F1EA;
   align-items: center;
   justify-content: center;
-  position:fixed;
-  bottom:0;left:0;right:0;height:30px;
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:30px;
   font-size: 12px;
 }
 

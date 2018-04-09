@@ -10,19 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405234447) do
+ActiveRecord::Schema.define(version: 20180409224936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "books", force: :cascade do |t|
     t.string "title", null: false
-    t.text "description", null: false
+    t.text "description", default: [], null: false, array: true
     t.string "publish_date", null: false
     t.integer "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "publisher", null: false
+    t.string "cover_file_name"
+    t.string "cover_content_type"
+    t.integer "cover_file_size"
+    t.datetime "cover_updated_at"
     t.index ["author_id"], name: "index_books_on_author_id"
   end
 
@@ -33,6 +37,10 @@ ActiveRecord::Schema.define(version: 20180405234447) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["name"], name: "index_users_on_name"
   end
 
