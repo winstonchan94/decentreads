@@ -9,7 +9,7 @@ const BookDetail = ({book}) => {
         <h2 className="book-title">{book.title}</h2>
         <p className="book-author">by {book.author.name}</p>
       </header>
-      <p className="book-description">{description}<br/></p>
+      <strong className="book-description">{description}</strong>
       <p className="book-publish-info">Published {book.publish_date} by {book.publisher}</p>
     </div>
   );
