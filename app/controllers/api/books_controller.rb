@@ -5,7 +5,7 @@ class Api::BooksController < ApplicationController
     if @book.save
       render json: @book
     else
-      render json: @book.errors.full_messages
+      render json: @book.errors.full_messages, status: 422 
     end
   end
 
@@ -16,7 +16,7 @@ class Api::BooksController < ApplicationController
 
   def index
     @books = Book.all
-    render :index 
+    render :index
   end
 
 

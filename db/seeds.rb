@@ -9,14 +9,14 @@ User.destroy_all
 Book.destroy_all
 # users
 
-demo = User.create({name: "demo", email: "demo", password: "password"})
-pierce_brown = User.create({name: "Pierce Brown", email: "pierce_brown@piercebrown.com", password: "password"})
-tolkien = User.create({name: "J.R.R. Tolkien", email: "tolkien@tolkien.com", password: "password"})
-rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", password: "password"})
+demo = User.create(name: "demo", email: "demo", password: "password")
+pierce_brown = User.create(name: "Pierce Brown", email: "pierce_brown@piercebrown.com", password: "password")
+tolkien = User.create(name: "J.R.R. Tolkien", email: "tolkien@tolkien.com", password: "password")
+rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", password: "password")
 # books
 
 
-  red_rising = Book.create({
+  red_rising = Book.create(
     title: "Red Rising",
     author_id: "#{pierce_brown.id}",
     publisher: "Del Rey Books",
@@ -57,9 +57,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523377883/red_rising.jpg"
 
-  })
+  )
 
-  golden_son = Book.create({
+  golden_son = Book.create(
     title: "Golden Son",
     author_id: "#{pierce_brown.id}",
     publisher: "Del Rey Books",
@@ -90,9 +90,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
         "He must live for more."
       ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523377883/golden_son.jpg"
-  })
+  )
 
-  morning_star = Book.create({
+  morning_star = Book.create(
     title: "Morning Star",
     author_id: "#{pierce_brown.id}",
     publisher: "Del Rey Books",
@@ -125,10 +125,10 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
         denied—and too glorious to surrender."
       ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523377883/morning_star.jpg"
-  })
+  )
 
 
-  iron_gold = Book.create({
+  iron_gold = Book.create(
     title: "Iron Gold",
     author_id: "#{pierce_brown.id}",
     publisher: "Del Rey Books",
@@ -167,9 +167,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
         triumph from masterly New York Times bestselling author Pierce Brown."
       ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523377883/iron_gold.jpg"
-  })
+  )
 
-  hobbit = Book.create({
+  hobbit = Book.create(
     title: "The Hobbit",
     author_id: "#{tolkien.id}",
     publisher: "Houghton Mifflin",
@@ -192,9 +192,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       by Douglas A. Anderson (2001). Unforgettable!"
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523379154/hobbit.jpg"
-  })
+  )
 
-  lotr_fellowship = Book.create({
+  lotr_fellowship = Book.create(
     title: "The Fellowship of the Ring",
     author_id: "#{tolkien.id}",
     publisher: "Houghton Mifflin Harcourt",
@@ -217,9 +217,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       there to destroy the Ring and foil the Dark Lord in his evil purpose."
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523377883/fellowship_ring.jpg"
-  })
+  )
 
-  lotr_twotowers = Book.create({
+  lotr_twotowers = Book.create(
     title: "The Two Towers",
     author_id: "#{tolkien.id}",
     publisher: "Mariner Books",
@@ -236,9 +236,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       soul-stirring climax in The Return of the King."
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523380834/two_towers.jpg"
-  })
+  )
 
-  lotr_rotk = Book.create({
+  lotr_rotk = Book.create(
     title: "The Return of the King",
     author_id: "#{tolkien.id}",
     publisher: "Dey Rey",
@@ -264,9 +264,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       in its detail. "
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523380834/rotk.jpg"
-  })
+  )
 
-  silmarillion = Book.create({
+  silmarillion = Book.create(
     title: "The Silmarillion",
     author_id: "#{tolkien.id}",
     publisher: "Houghton Mifflin Harcourt",
@@ -293,9 +293,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       their heroism, against the great Enemy."
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523380834/silmarillion.jpg"
-  })
+  )
 
-  hp_one = Book.create({
+  hp_one = Book.create(
     title: "Harry Potter and the Sorceror's Stone",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -328,9 +328,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       stage for many high-stakes adventures to come."
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381458/hp1.jpg"
-  })
+  )
 
-  hp_two = Book.create({
+  hp_two = Book.create(
     title: "Harry Potter and the Chamber of Secrets",
     author_id: "#{rowling.id}",
     publisher: "Arthur A. Levine Books",
@@ -357,9 +357,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       most suspects . . . Harry Potter himself?"
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp2.jpg"
-  })
+  )
 
-  hp_three = Book.create({
+  hp_three = Book.create(
     title: "Harry Potter and the Prisoner of Azkaban",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -387,9 +387,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       third installment of the beloved series.",
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp3.jpg"
-  })
+  )
 
-  hp_four = Book.create({
+  hp_four = Book.create(
     title: "Harry Potter and the Goblet of Fire",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -406,9 +406,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       wizarding standards. And in his case, different can be deadly.",
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp4.jpg"
-  })
+  )
 
-  hp_five = Book.create({
+  hp_five = Book.create(
     title: "Harry Potter and the Order of the Phoenix",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -430,9 +430,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       video game by Electronic Arts.",
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp5.jpg"
-  })
+  )
 
-  hp_six = Book.create({
+  hp_six = Book.create(
     title: "Harry Potter and the Half-Blood Prince",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -471,9 +471,9 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       Hogwarts’s—future in shadow."
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp6.jpg"
-  })
+  )
 
-  hp_seven = Book.create({
+  hp_seven = Book.create(
     title: "Harry Potter and the Deathly Hallows",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -502,10 +502,12 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
       always triumph over death."
     ],
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp7.jpg"
-  })
+  )
 
-  # demo_shelf = Shelf.create({user_id: demo.id, name: "demo shelf"})
+  demo_shelf = Shelf.create(user_id: demo.id, name: "demo shelf")
 
-  # Shelving.create({self_id: demo_shelf.id, book_id: hp_one.id})
+  Book.all.each do |book|
+    Shelving.create(book_id: book.id, shelf_id: demo.shelves.first.id)
+  end
 
 #here
