@@ -13,11 +13,11 @@ class BookIndex extends Component {
     const { books } = this.props;
     if (!this.props.books) { return 'loading'; } else {
     return (
-      <section className="book-list">
-        <ul>
+      <div className="book-list-box">
+        <ul className="book-list">
           {books.map(book => <BookIndexItem key={book.id} book={book} />)}
         </ul>
-      </section>
+      </div>
     );
     }
   }
