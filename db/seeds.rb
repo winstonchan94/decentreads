@@ -504,10 +504,14 @@ rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", passwo
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp7.jpg"
   )
 
-  demo_shelf = Shelf.create(user_id: demo.id, name: "demo shelf")
+  Shelf.create(name: "All", user_id: demo.id)
+  Shelf.create(name: "Read", user_id: demo.id)
+  Shelf.create(name: "Currently Reading", user_id: demo.id)
+  Shelf.create(name: "Want to Read", user_id: demo.id)
 
   Book.all.each do |book|
     Shelving.create(book_id: book.id, shelf_id: demo.shelves.first.id)
+    Shelving.create(book_id: book.id, shelf_id: demo.shelves.second.id)
   end
 
 #here
