@@ -1,12 +1,36 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                  :integer          not null, primary key
+#  name                :string           not null
+#  email               :string           not null
+#  password_digest     :string           not null
+#  session_token       :string           not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  avatar_file_name    :string
+#  avatar_content_type :string
+#  avatar_file_size    :integer
+#  avatar_updated_at   :datetime
+#
+
 class User < ApplicationRecord
   validates :session_token,
    :password_digest, :name,
    :email, presence: true
   validates :email, :session_token, uniqueness: true
-  validates :password, length: {minimum: 6, allow_nil: true}
+  validates :password, length: { minimum: 6, allow_nil: true }
+
   attr_reader :password
 
   after_initialize :ensure_session_token
+
+  has_many :shelves
+  
+  has_many :books,
+    through: :shelves,
+    source: :books
 
   def password=(password)
     @password = password

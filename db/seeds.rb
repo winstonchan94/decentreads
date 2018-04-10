@@ -295,7 +295,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523380834/silmarillion.jpg"
   })
 
-  hp_sorc = Book.create({
+  hp_one = Book.create({
     title: "Harry Potter and the Sorceror's Stone",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -330,7 +330,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381458/hp1.jpg"
   })
 
-  hp_chamber = Book.create({
+  hp_two = Book.create({
     title: "Harry Potter and the Chamber of Secrets",
     author_id: "#{rowling.id}",
     publisher: "Arthur A. Levine Books",
@@ -359,7 +359,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp2.jpg"
   })
 
-  hp_prisoner = Book.create({
+  hp_three = Book.create({
     title: "Harry Potter and the Prisoner of Azkaban",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -389,7 +389,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp3.jpg"
   })
 
-  hp_goblet = Book.create({
+  hp_four = Book.create({
     title: "Harry Potter and the Goblet of Fire",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -408,7 +408,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp4.jpg"
   })
 
-  hp_order = Book.create({
+  hp_five = Book.create({
     title: "Harry Potter and the Order of the Phoenix",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -432,7 +432,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp5.jpg"
   })
 
-  hp_prince = Book.create({
+  hp_six = Book.create({
     title: "Harry Potter and the Half-Blood Prince",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -473,7 +473,7 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp6.jpg"
   })
 
-  hp_hallows = Book.create({
+  hp_seven = Book.create({
     title: "Harry Potter and the Deathly Hallows",
     author_id: "#{rowling.id}",
     publisher: "Scholastic Inc.",
@@ -504,6 +504,8 @@ rowling = User.create({name: "J.K. Rowling", email: "rowling@rowling.com", passw
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp7.jpg"
   })
 
+  # demo_shelf = Shelf.create({user_id: demo.id, name: "demo shelf"})
 
+  # Shelving.create({self_id: demo_shelf.id, book_id: hp_one.id})
 
 #here

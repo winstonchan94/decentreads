@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const logo = (
   <Link className="nav-logo" to="/"><h3>DecentReads</h3></Link>
 );
