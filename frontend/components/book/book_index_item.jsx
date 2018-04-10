@@ -7,8 +7,8 @@ const BookIndexItem = ( { book } ) => (
     <li key={book.id}>
       <Link className="book-list-link" to={`/books/${book.id}`}>
         <img className="book-list-cover" src={book.coverUrl}></img>
-        <span>{book.title}</span>
       </Link>
+      <span className="book-list-title">{book.title}</span>
     </li>
 );
 
