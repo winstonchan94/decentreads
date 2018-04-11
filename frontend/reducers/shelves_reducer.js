@@ -11,7 +11,7 @@ const shelvesReducer = (state = {}, action) => {
     case RECEIVE_SHELVES:
       return merge({}, state, action.shelves);
     case RECEIVE_SHELF:
-      return merge({}, state, {[action.shelf.id]: action.shelf});
+      return merge({}, state, {[action.shelf.name]: action.shelf});
     default:
       return state;
   }

@@ -6,7 +6,7 @@ class ShelfForm extends React.Component {
     super(props);
     this.state = {
       name: '',
-      user_id: this.props.currentUser.id,
+      userId: this.props.currentUser.id,
       toggleForm: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,11 +32,10 @@ class ShelfForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const shelf = Object.assign({}, {name: this.state.name, user_id: this.state.user_id});
+    const shelf = Object.assign({}, {name: this.state.name, user_id: this.state.userId});
+    this.hideForm();
     this.props.processForm(shelf);
   }
-
-
 
 
   render() {
@@ -45,13 +44,14 @@ class ShelfForm extends React.Component {
         <button onClick={this.showForm}>Add Shelf</button>
       ); } else {
       return (
-        <form onSubmit={this.handleSubmit, this.hideForm}>
+        <form onSubmit={this.handleSubmit}>
+          <h5>Add a Shelf:</h5>
           <input type="text"
             value={this.state.name}
             onChange={this.update('name')}
             className="shelf-form-input"
           />
-          <button className="shelf-form-submit">Add Shelf</button>
+        <input type="submit" value="Add" className="shelf-form-submit"/>
         </form>
       );
     }
