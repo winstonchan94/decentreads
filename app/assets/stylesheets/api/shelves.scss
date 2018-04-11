@@ -54,3 +54,18 @@
 .shelf-form-button:hover {
   background: #ebe6d9;
 }
+
+.shelf-delete-button {
+  margin-left: 5px;
+  cursor: pointer;
+  color: #382110;
+  font-family: "Merriweather";
+  border: 1px solid #d3d3d3;
+  font-weight: bold;
+  background: #F4F1EA;
+  font-size: 12px;
+}
+
+.shelf-delete-button:hover {
+  background: #ebe6d9;
+}

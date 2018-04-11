@@ -7,7 +7,9 @@ class SideBar extends React.Component {
     this.props.requestShelves(this.props.currentUser.id);
   }
 
+
   render() {
+
     const { shelves } = this.props;
     if (!this.props.shelves) { return 'loading'; }
     else {
@@ -15,10 +17,31 @@ class SideBar extends React.Component {
         <nav className="side-bar">
           <h5>BOOKSHELVES</h5>
           <ul className="shelf-list">
-            {shelves.map(shelf =>
-              <li className="shelf-list-item">
-                <Link className="shelf-list-link" to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
-              </li>)}
+            {
+              shelves.map(
+                shelf => {
+                  if (!['All', 'Read', 'Currently Reading', 'Want to Read'].includes(shelf.name))
+                    {
+                      return (<li className="shelf-list-item">
+                        <Link
+                          className="shelf-list-link"
+                          to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
+                        <button
+                          className="shelf-delete-button"
+                          onClick={() => {
+                            this.props.destroyShelf(shelf.id);
+                            this.props.deleteShelf(shelf);
+                          }}>x</button>
+                      </li>);
+                    }
+                  else {
+                      return (<li className="shelf-list-item">
+                        <Link className="shelf-list-link" to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
+                      </li>);
+                }
+              })
+            }
+
           </ul>
           <ShelfFormContainer />
         </nav>
