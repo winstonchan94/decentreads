@@ -25,3 +25,6 @@ export const requestBook = bookId => dispatch => (
     dispatch(receiveBook(book))
   ))
 );
+export const clearBooks = () => dispatch => (
+  dispatch(receiveBooks({}))
+);

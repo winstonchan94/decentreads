@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-
+import { clearBooks } from '../../actions/books_actions';
 import { requestShelf } from '../../actions/shelf_actions';
 import { selectShelf, selectBooks} from '../../reducers/selectors';
 import ShelfShow from './shelf_show';
@@ -17,7 +17,8 @@ const mapStateToProps = (state, { match }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestShelf: shelfId => dispatch(requestShelf(shelfId))
+  requestShelf: shelfId => dispatch(requestShelf(shelfId)),
+  clearBooks: () => dispatch(clearBooks())
 });
 
 export default connect(

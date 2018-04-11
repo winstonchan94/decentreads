@@ -3,6 +3,7 @@ import { selectShelves } from '../../reducers/selectors';
 import { requestShelves, requestShelf } from '../../actions/shelf_actions';
 import SideBar from './side_bar';
 
+
 const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser,
   shelves: selectShelves(state)
@@ -11,7 +12,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   requestShelves: (userId) => dispatch(requestShelves()),
-  requestShelf: (shelfId) => dispatch(requestShelf(shelfId))
+  requestShelf: (shelfId) => dispatch(requestShelf(shelfId)),
 });
 
 export default connect(
