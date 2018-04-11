@@ -35,6 +35,7 @@ class ShelfForm extends React.Component {
     const shelf = Object.assign({}, {name: this.state.name, user_id: this.state.userId});
     this.hideForm();
     this.props.processForm(shelf);
+    this.setState({name: ''});
   }
 
 

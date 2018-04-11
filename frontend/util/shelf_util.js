@@ -26,3 +26,11 @@ export const deleteShelf = shelfId => (
     url: `api/shelves/${shelfId}`
   })
 );
+
+export const createShelving = shelving => (
+  $.ajax({
+    method: "POST",
+    url: `api/shelvings`,
+    data: { shelving }
+  })
+);
