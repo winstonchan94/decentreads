@@ -19,3 +19,10 @@ export const createShelf = shelf => (
     data: { shelf },
   })
 );
+
+export const deleteShelf = shelfId => (
+  $.ajax({
+    method: "DELETE",
+    url: `api/shelves/${shelfId}`
+  })
+);

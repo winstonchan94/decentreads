@@ -20,9 +20,18 @@ class Api::ShelvesController < ApplicationController
 
   def index
     @shelves = current_user.shelves
-    render :index 
+    render :index
   end
 
+  def destroy
+    @shelf = Shelf.find(params[:id])
+    if @shelf.user_id != current_user.id
+      render json: ['You do not have permission to delete this shelf'], status: 420
+    else
+      @shelf.destroy!
+      render :show
+    end
+  end
 
   private
   def shelf_params

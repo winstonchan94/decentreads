@@ -2,6 +2,7 @@ import * as APIUtil from '../util/shelf_util';
 
 export const RECEIVE_SHELVES = 'RECEIVE_SHELVES';
 export const RECEIVE_SHELF = 'RECEIVE_SHELF';
+export const DELETE_SHELF = 'DELETE_SHELF';
 
 export const receiveShelves = shelves => ({
   type: RECEIVE_SHELVES,
@@ -11,6 +12,11 @@ export const receiveShelves = shelves => ({
 export const receiveShelf = payload => ({
   type: RECEIVE_SHELF,
   payload
+});
+
+export const deleteShelf = shelf => ({
+  type: DELETE_SHELF,
+  shelf
 });
 
 export const requestShelves = (userId) => dispatch => (
@@ -29,4 +35,8 @@ export const createShelf = shelf => dispatch => (
   APIUtil.createShelf(shelf).then(shelf => (
     dispatch(receiveShelf(shelf))
   ))
+);
+
+export const destroyShelf = shelfId => dispatch => (
+  APIUtil.deleteShelf(shelfId).then(shelf => dispatch(deleteShelf(shelf)))
 );

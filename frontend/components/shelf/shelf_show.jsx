@@ -18,8 +18,8 @@ class ShelfShow extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.shelfId !== nextProps.shelfId) {
-      this.props.requestShelf(nextProps.shelfId);
       this.props.clearBooks();
+      this.props.requestShelf(nextProps.shelfId);
     }
   }
 

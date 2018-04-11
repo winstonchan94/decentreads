@@ -6,9 +6,12 @@
   font-size: 24px;
   font-weight: bold;
   width: 100vw;
+
+
 }
 .book-list {
   width: 40%;
+  max-width: 600px;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +19,8 @@
   margin-left: 31%;
   margin-top: 40px;
   margin-bottom: 80px;
+
+
 
 }
 

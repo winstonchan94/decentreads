@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .all-things {
-  display: flex; 
+  display: flex;
 }
 .logged-in-nav, .logged-out-nav {
   display: flex;
@@ -27,9 +27,29 @@
   color: #382110;
 }
 
+.nav-home {
+  position: absolute;
+  left: 320px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #382110;
+  height: 50px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.nav-home:hover {
+  background: #382110;
+  color: white;
+}
+
+.nav-home h5 {
+  position: relative;
+  top: 17px;
+}
 .nav-my-books {
   position: absolute;
-  left: 340px;
+  left: 410px;
   text-decoration: none;
   color: #382110;
   height: 50px;
@@ -50,8 +70,8 @@
 .logged-out-buttons {
   list-style: none;
   display: flex;
-  position: absolute;
-  right: 60px;
+  margin-right: 60px;
+
 }
 
 .logged-out-buttons li {
@@ -77,8 +97,7 @@
 .logged-in-stuff {
   list-style: none;
   display: flex;
-  position: absolute;
-  right: 60px;
+  margin-right: 60px;
   align-items: center;
 }
 
