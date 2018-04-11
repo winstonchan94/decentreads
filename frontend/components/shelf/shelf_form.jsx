@@ -41,7 +41,7 @@ class ShelfForm extends React.Component {
   render() {
     if (this.state.toggleForm === false) {
       return (
-        <button onClick={this.showForm}>Add Shelf</button>
+        <button className="shelf-form-button"onClick={this.showForm}>Add Shelf</button>
       ); } else {
       return (
         <form onSubmit={this.handleSubmit}>
@@ -51,7 +51,7 @@ class ShelfForm extends React.Component {
             onChange={this.update('name')}
             className="shelf-form-input"
           />
-        <input type="submit" value="Add" className="shelf-form-submit"/>
+        <input type="submit" value="Add" className="shelf-form-button"/>
         </form>
       );
     }

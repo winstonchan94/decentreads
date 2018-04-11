@@ -11,3 +11,7 @@ export const selectBook = (state, id) => (
 export const selectShelves = (state) => (
   values(state.entities.shelves)
 );
+
+export const selectShelf = (state, id) => (
+  state.entities.shelves[id]
+);

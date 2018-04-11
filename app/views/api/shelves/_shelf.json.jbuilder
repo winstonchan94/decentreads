@@ -1,7 +1,5 @@
-json.extract! shelf, :id, :name
-json.userId shelf.user_id
-shelf.books.each do |book|
-  json.set! book.id do
-    json.partial! 'api/books/book', book: book
-  end
-end
+json.shelf do
+  json.extract! shelf, :id, :name
+  json.userId shelf.user_id
+  json.book_ids shelf.books.pluck(:id)
+end 

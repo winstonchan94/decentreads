@@ -22,15 +22,16 @@ const App = () => {
       <header>
         <NavBarContainer />
       </header>
-
-      <Switch>
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/" component={BookIndexContainer} />
-        <Route path="/books/:bookId" component={BookShowContainer} />
+      <div className="all-things">
         <ProtectedRoute path="/mybooks" component={SideBarContainer}/>
-        <Route path="/mybooks/shelf/:shelfId" component={ShelfShowContainer}/>
-      </Switch>
+        <Switch>
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <Route exact path="/" component={BookIndexContainer} />
+          <Route path="/books/:bookId" component={BookShowContainer} />
+          <Route path="/mybooks/shelf/:shelfId" component={ShelfShowContainer}/>
+        </Switch>
+      </div>
       <footer><li>© 2018 DecentReads Inc</li></footer>
     </div>
   );

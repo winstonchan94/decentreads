@@ -14,8 +14,11 @@ class SideBar extends React.Component {
       return (
         <nav className="side-bar">
           <h5>BOOKSHELVES</h5>
-          <ul>
-            {shelves.map(shelf => <li><Link to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link></li>)}
+          <ul className="shelf-list">
+            {shelves.map(shelf =>
+              <li className="shelf-list-item">
+                <Link className="shelf-list-link" to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
+              </li>)}
           </ul>
           <ShelfFormContainer />
         </nav>

@@ -1,6 +1,10 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.all-things {
+  display: flex; 
+}
 .logged-in-nav, .logged-out-nav {
   display: flex;
   color: #382110;

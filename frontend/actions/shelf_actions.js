@@ -8,9 +8,9 @@ export const receiveShelves = shelves => ({
   shelves
 });
 
-export const receiveShelf = shelf => ({
+export const receiveShelf = payload => ({
   type: RECEIVE_SHELF,
-  shelf
+  payload
 });
 
 export const requestShelves = (userId) => dispatch => (

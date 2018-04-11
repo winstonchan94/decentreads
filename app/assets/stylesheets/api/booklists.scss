@@ -1,11 +1,11 @@
 .book-list-box {
   text-align: center;
-
 }
 .book-list-name {
   margin-top: 50px;
   font-size: 24px;
   font-weight: bold;
+  width: 100vw;
 }
 .book-list {
   width: 40%;
@@ -13,6 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  margin-left: 31%;
   margin-top: 40px;
   margin-bottom: 80px;
 
