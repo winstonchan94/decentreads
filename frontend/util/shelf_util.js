@@ -34,3 +34,11 @@ export const createShelving = shelving => (
     data: { shelving }
   })
 );
+
+export const destroyShelving = ({ shelfId, bookId }) => (
+  $.ajax({
+    method: "DELETE",
+    url: `api/shelvings`,
+    data: { shelf_id: shelfId, book_id: bookId }
+  })
+);

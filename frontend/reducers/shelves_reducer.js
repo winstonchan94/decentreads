@@ -10,13 +10,13 @@ const shelvesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SHELVES:
-      return merge({}, state, action.shelves);
+      return merge({}, action.shelves);
     case RECEIVE_SHELF:
       return merge({}, state, {[action.payload.shelf.id]: action.payload.shelf});
     case DELETE_SHELF:
       let newState = merge({}, state);
       delete newState[action.shelf.id];
-      return newState; 
+      return newState;
     default:
       return state;
   }
