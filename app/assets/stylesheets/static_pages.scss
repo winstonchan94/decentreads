@@ -1,7 +1,7 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-nav {
+.logged-in-nav, .logged-out-nav {
   display: flex;
   color: #382110;
   background: #F4F1EA;
@@ -21,6 +21,26 @@ nav {
   margin-left: 140px;
   text-decoration: none;
   color: #382110;
+}
+
+.nav-my-books {
+  position: absolute;
+  left: 340px;
+  text-decoration: none;
+  color: #382110;
+  height: 50px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.nav-my-books:hover {
+  background: #382110;
+  color: white;
+}
+
+.nav-my-books h5 {
+  position: relative;
+  top: 17px;
 }
 
 .logged-out-buttons {

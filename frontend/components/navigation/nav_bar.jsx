@@ -6,9 +6,15 @@ const logo = (
   <Link className="nav-logo" to="/"><h3>DecentReads</h3></Link>
 );
 
+//change route after setup
+const myBooks = (
+  <Link className="nav-my-books" to={`/mybooks`}><h5>My Books</h5></Link>
+);
+
 const sessionLinks = (demoLogin) => (
   <nav className="logged-out-nav">
     { logo }
+    { myBooks }
     <ul className="logged-out-buttons" >
 
         <button onClick={demoLogin} className="demo-button">DEMO</button>
@@ -26,6 +32,7 @@ const sessionLinks = (demoLogin) => (
 const personalGreeting = (currentUser, logout) => (
 	<nav className="logged-in-nav">
     { logo }
+    { myBooks }
     <ul className="logged-in-stuff">
       <li>
         <h2 className="current-user">{currentUser.name}</h2>

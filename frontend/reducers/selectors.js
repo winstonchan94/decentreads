@@ -7,3 +7,7 @@ export const selectBooks = (state) => (
 export const selectBook = (state, id) => (
   state.entities.books[id]
 );
+
+export const selectShelves = (state) => (
+  values(state.entities.shelves)
+);

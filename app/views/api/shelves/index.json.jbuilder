@@ -1,5 +1,5 @@
 @shelves.each do |shelf|
   json.set! shelf.id do
-    json.partial! 'api/shelves/shelf', shelf: shelf
+    json.extract! shelf, :id, :name
   end
 end
