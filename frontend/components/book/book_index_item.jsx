@@ -4,13 +4,19 @@ import ReadStatusContainer from './read_status_container';
 
 //add aws paperclip whatever
 
-const BookIndexItem = ( { book } ) => (
+const BookIndexItem = ( { book, currentUser } ) => {
+  let readStatus;
+  if (currentUser) {
+    readStatus = (<ReadStatusContainer className="book-list-status" book={book} />);
+  }
+  return (
     <li className="book-index-item" key={book.id}>
       <Link className="book-list-link" to={`/books/${book.id}`}>
         <img className="book-list-cover" src={book.coverUrl}></img>
       </Link>
-      <ReadStatusContainer className="book-list-status" book={book} />
+      {readStatus}
     </li>
-);
+  );
+};
 
 export default BookIndexItem;

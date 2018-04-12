@@ -7,7 +7,8 @@ import {
 import BookIndex from './book_index';
 
 const mapStateToProps = state => ({
-  books: selectBooks(state)
+  books: selectBooks(state),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
