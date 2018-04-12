@@ -3,7 +3,7 @@ import ReadStatusContainer from './read_status_container';
 
 //will need to destructure once reviews
 const BookDetail = ({book}) => {
-  const description = book.description.map(para => (<p>{para}</p>));
+  const description = book.description.map((para, idx) => (<p key={idx}>{para}</p>));
   return(
     <div className="book-details-box">
       <div className="book-details-left">

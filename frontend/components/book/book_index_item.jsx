@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReadStatusContainer from './read_status_container';
 
 //add aws paperclip whatever
 
 const BookIndexItem = ( { book } ) => (
-    <li key={book.id}>
+    <li className="book-index-item" key={book.id}>
       <Link className="book-list-link" to={`/books/${book.id}`}>
         <img className="book-list-cover" src={book.coverUrl}></img>
       </Link>
-      <span className="book-list-title">{book.title}</span>
+      <ReadStatusContainer className="book-list-status" book={book} />
     </li>
 );
 

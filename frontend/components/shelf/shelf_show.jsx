@@ -11,14 +11,12 @@ class ShelfShow extends React.Component {
 
 
 
-
   componentDidMount() {
     this.props.requestShelf(this.props.shelfId);
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.shelfId !== nextProps.shelfId) {
-      this.props.clearBooks();
       this.props.requestShelf(nextProps.shelfId);
     }
   }

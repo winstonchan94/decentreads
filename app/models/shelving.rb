@@ -13,6 +13,11 @@ class Shelving < ApplicationRecord
   validates :book_id, :shelf_id, presence: true
   before_save :ensure_individuality
 
+  validates :book_id, uniqueness: { scope: :shelf_id }
+
+  attr_accessor :shelf_to_remove_from
+
+
   belongs_to :book
 
   belongs_to :shelf
@@ -21,13 +26,23 @@ class Shelving < ApplicationRecord
     through: :shelf
 
   def ensure_individuality
+    defaults = ['Read', 'Currently Reading', 'Want to Read']
+    @do_remove = false
     user = self.user
     encroaching_defaults = user.shelves.select do |shelf|
-      ['Read', 'Currently Reading', 'Want to Read'].include?(shelf.name) &&
-      shelf.books.include?(self.book)
+      defaults.include?(shelf.name) &&
+      shelf.books.include?(self.book) &&
+      shelf.id != self.shelf.id &&
+      defaults.include?(self.shelf.name)
     end
+
     user.shelvings.each do |shelving|
-      shelving.destroy if encroaching_defaults.any?{|shelf| shelf.shelvings.include?(shelving)} && shelving.book_id == self.book_id
+      if (encroaching_defaults.any?{|shelf| shelf.shelvings.include?(shelving)} &&
+        shelving.book_id == self.book_id &&
+        ['Read', 'Currently Reading', 'Want to Read'].include?(shelving.shelf.name))
+          @shelf_to_remove_from = shelving.shelf_id
+          shelving.destroy
+      end
     end
   end
 end

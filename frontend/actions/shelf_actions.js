@@ -21,10 +21,12 @@ export const deleteShelf = shelf => ({
   shelf
 });
 
-export const addBookToShelf = (bookId, shelfId) => ({
+export const addBookToShelf = (bookId, shelfId, shelfToRemoveFrom, doRemoveFrom) => ({
   type: ADD_SHELVING,
   bookId,
-  shelfId
+  shelfId,
+  shelfToRemoveFrom,
+  doRemoveFrom
 });
 
 export const removeBookFromShelf = (bookId, shelfId) => ({
@@ -35,7 +37,7 @@ export const removeBookFromShelf = (bookId, shelfId) => ({
 
 export const addShelving = (bookId, shelfId) => dispatch => (
   APIUtil.createShelving({ bookId, shelfId }).then(shelving => (
-    dispatch(addBookToShelf(shelving.bookId, shelving.shelfId))
+    dispatch(addBookToShelf(shelving.bookId, shelving.shelfId, shelving.shelfToRemoveFrom, shelving.doRemoveFrom))
   ))
 );
 
@@ -64,5 +66,5 @@ export const createShelf = shelf => dispatch => (
 );
 
 export const destroyShelf = shelfId => dispatch => (
-  APIUtil.deleteShelf(shelfId).then(shelf => dispatch(deleteShelf(shelf)))
+  APIUtil.deleteShelf(shelfId).then(({shelf}) => dispatch(deleteShelf(shelf)))
 );

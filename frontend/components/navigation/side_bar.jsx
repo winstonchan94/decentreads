@@ -20,9 +20,9 @@ class SideBar extends React.Component {
             {
               shelves.map(
                 shelf => {
-                  if (!['All', 'Read', 'Currently Reading', 'Want to Read'].includes(shelf.name))
+                  if (!['Read', 'Currently Reading', 'Want to Read'].includes(shelf.name))
                     {
-                      return (<li className="shelf-list-item">
+                      return (<li key={shelf.id} className="shelf-list-item">
                         <Link
                           className="shelf-list-link"
                           to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
@@ -30,12 +30,11 @@ class SideBar extends React.Component {
                           className="shelf-delete-button"
                           onClick={() => {
                             this.props.destroyShelf(shelf.id);
-                            this.props.deleteShelf(shelf);
                           }}>x</button>
                       </li>);
                     }
                   else {
-                      return (<li className="shelf-list-item">
+                      return (<li key={shelf.id} className="shelf-list-item">
                         <Link className="shelf-list-link" to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
                       </li>);
                 }

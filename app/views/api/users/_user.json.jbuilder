@@ -4,6 +4,7 @@ json.shelves do
     json.set! shelf.id do
       json.id shelf.id
       json.name shelf.name
+      json.bookIds shelf.books.pluck(:id)
     end
   end
 end

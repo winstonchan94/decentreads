@@ -5,7 +5,7 @@ import {
   RECEIVE_BOOKS,
 } from '../actions/books_actions';
 
-import { RECEIVE_SHELF } from '../actions/shelf_actions';
+import { RECEIVE_SHELF, ADD_SHELVING } from '../actions/shelf_actions';
 
 const booksReducer = (state = {}, action) => {
   Object.freeze(state);

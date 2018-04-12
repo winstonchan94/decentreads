@@ -12,17 +12,24 @@
   flex-direction: column;
   margin-left: 25%;
   margin-top: 10px;
-  width: 180px;
 }
 
 .book-details-box {
   display: flex;
 }
 
+.book-show-status {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 .book-cover {
   width: 170px;
   height: 230px;
-
+  margin-bottom: 5px;
   box-shadow: 0px 5px 5px #ddd;
 }
 

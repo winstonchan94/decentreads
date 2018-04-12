@@ -42,26 +42,26 @@ class ReadStatus extends React.Component {
   render() {
 
     const shelves = values(this.props.shelves);
-
-    const options = shelves.map((shelf) => (<option key={shelf.id}
-    value={shelf.id}>{shelf.name}</option>));
-
-
-
-    if (this.state.toggleForm === false) {
-      return (
-        <button className="read-status-button" onClick={this.showForm}>Add to Shelf</button>
-      ); } else {
+    const defaultShelves = ['Read', 'Currently Reading', "Want to Read"];
+    const options = shelves.map((shelf) =>
+    {
+      if (shelf.bookIds.includes(this.state.bookId) && defaultShelves.includes(shelf.name)) {
+        return (<option key={shelf.id} selected="selected" value={shelf.id}>{shelf.name}</option>);
+      }
+      else {
+        return (<option key={shelf.id} value={shelf.id}>{shelf.name}</option>);
+      }
+    }
+      );
       return (
         <form className="read-status-form" onSubmit={this.handleSubmit}>
           <select onChange={this.update('shelfId')}>
             {options}
           </select>
-        <input type="submit" value="Add to Shelf" className="read-status-button"/>
+          <input type="submit" value="Add to Shelf" className="read-status-button"/>
         </form>
       );
     }
-  }
 }
 
 
