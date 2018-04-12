@@ -1,3 +1,25 @@
 // Place all the styles related to the api/shelvings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.read-status-button {
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  text-decoration: none;
+  background: #F4F1EA;
+  cursor: pointer;
+  font-family: "Merriweather";
+  color: #382110;
+  font-weight: bold;
+}
+
+.read-status-button:hover {
+  background: #ebe6d9;
+}
+
+.read-status-form {
+
+}

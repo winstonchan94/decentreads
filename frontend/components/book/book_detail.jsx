@@ -1,11 +1,15 @@
 import React from 'react';
+import ReadStatusContainer from './read_status_container';
 
 //will need to destructure once reviews
 const BookDetail = ({book}) => {
   const description = book.description.map(para => (<p>{para}</p>));
   return(
     <div className="book-details-box">
-      <img className="book-cover" src={book.coverUrl}></img>
+      <div className="book-details-left">
+        <img className="book-cover" src={book.coverUrl}></img>
+        <ReadStatusContainer className="book-show-status" book={book}/>
+      </div>
       <div className="book-details">
         <header>
           <h2 className="book-title">{book.title}</h2>

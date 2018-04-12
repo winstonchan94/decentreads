@@ -11,7 +11,7 @@ const booksReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_BOOKS:
-      return merge({}, action.books);
+      return merge({}, state.session, action.books);
     case RECEIVE_BOOK:
       return merge({}, state, {[action.book.id]: action.book});
     case RECEIVE_SHELF:
