@@ -27,18 +27,18 @@ export const deleteShelf = shelfId => (
   })
 );
 
-export const createShelving = shelving => (
+export const createShelving = ({ bookId, shelfId }) => (
   $.ajax({
     method: "POST",
     url: `api/shelvings`,
-    data: { shelving }
+    data: {shelving:{ book_id: bookId, shelf_id: shelfId }}
   })
 );
 
-export const destroyShelving = ({ shelfId, bookId }) => (
+export const destroyShelving = ({ bookId, shelfId }) => (
   $.ajax({
     method: "DELETE",
     url: `api/shelvings`,
-    data: { shelf_id: shelfId, book_id: bookId }
+    data: {shelving: { shelf_id: shelfId, book_id: bookId } }
   })
 );

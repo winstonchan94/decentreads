@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :shelvings, only: [:create, :destroy]
   end
 
+  delete '/api/shelvings', to: "api/shelvings#destroy"
+
   root "static_pages#root"
 
 end

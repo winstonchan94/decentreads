@@ -24,5 +24,5 @@ class Book < ApplicationRecord
   belongs_to :author,
     class_name: :User
 
-  has_many :shelvings 
+  has_many :shelvings
 end

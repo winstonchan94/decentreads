@@ -3,6 +3,8 @@ import * as APIUtil from '../util/shelf_util';
 export const RECEIVE_SHELVES = 'RECEIVE_SHELVES';
 export const RECEIVE_SHELF = 'RECEIVE_SHELF';
 export const DELETE_SHELF = 'DELETE_SHELF';
+export const ADD_SHELVING = 'ADD_SHELVING';
+export const REMOVE_SHELVING = 'REMOVE_SHELVING';
 
 export const receiveShelves = shelves => ({
   type: RECEIVE_SHELVES,
@@ -18,6 +20,30 @@ export const deleteShelf = shelf => ({
   type: DELETE_SHELF,
   shelf
 });
+
+export const addBookToShelf = (bookId, shelfId) => ({
+  type: ADD_SHELVING,
+  bookId,
+  shelfId
+});
+
+export const removeBookFromShelf = (bookId, shelfId) => ({
+  type: REMOVE_SHELVING,
+  bookId,
+  shelfId
+});
+
+export const addShelving = (bookId, shelfId) => dispatch => (
+  APIUtil.createShelving({ bookId, shelfId }).then(shelving => (
+    dispatch(addBookToShelf(shelving.bookId, shelving.shelfId))
+  ))
+);
+
+export const destroyShelving = (bookId, shelfId) => dispatch => (
+  APIUtil.destroyShelving({bookId, shelfId}).then(shelving => (
+    dispatch(removeBookFromShelf(shelving.bookId, shelving.shelfId))
+  ))
+);
 
 export const requestShelves = (userId) => dispatch => (
   APIUtil.fetchShelves(userId).then(shelves => (
