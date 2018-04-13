@@ -28,7 +28,7 @@ class ShelfShow extends React.Component {
       <div className="book-list-box">
         <h1 className="book-list-name">{this.props.shelf.name}</h1>
         <ul className="book-list">
-          {this.props.books.map(book => <BookIndexItem key={book.id} book={book} currentUser={currentUser}/>)}
+          {this.props.books.reverse().map(book => <BookIndexItem key={book.id} book={book} currentUser={currentUser}/>)}
         </ul>
       </div>
     );

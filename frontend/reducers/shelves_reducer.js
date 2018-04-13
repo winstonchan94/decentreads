@@ -22,7 +22,9 @@ const shelvesReducer = (state = {}, action) => {
     case ADD_SHELVING:
       newState = merge({}, state);
       if (action.shelfToRemoveFrom) {
-        delete newState[action.shelfToRemoveFrom].bookIds[newState[action.shelfToRemoveFrom].bookIds.indexOf(action.bookId)];
+        if (newState[action.shelfToRemoveFrom]) {
+          delete newState[action.shelfToRemoveFrom].bookIds[newState[action.shelfToRemoveFrom].bookIds.indexOf(action.bookId)];
+        }
       }
       return newState;
     default:

@@ -7,6 +7,7 @@ import {
 import {
   RECEIVE_SHELF,
   DELETE_SHELF,
+  ADD_SHELVING
 } from '../actions/shelf_actions';
 
 const _nullUser = Object.freeze({
@@ -28,6 +29,10 @@ const sessionReducer = (state = _nullUser, action) => {
       newState = merge({}, state);
       delete newState.currentUser.shelves[action.shelf.id];
       return newState;
+    case ADD_SHELVING:
+      updateUser = merge({}, state.currentUser.bookIds, [action.bookId]);
+      return merge({}, state, {currentUser: {bookIds:updateUser}});
+
     default:
       return state;
   }
