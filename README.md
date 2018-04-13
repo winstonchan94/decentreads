@@ -31,9 +31,9 @@ DecentReads is a single-page web application for organizing and reviewing books.
   * Individual book pages house a list of existing reviews by users
 
 ## Functionality
-### Login-status-aware component rendering
+#### Login-status-aware component rendering
 
-### Dynamic book shelving
+#### Dynamic book shelving
 
 ## Future Plans
 Future updates will include but are not limited to:
