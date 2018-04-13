@@ -5,17 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Shelving.destroy_all
 User.destroy_all
 Book.destroy_all
 Review.destroy_all
 # users
 
-demo = User.create(name: "demo", email: "demo", password: "password")
+demo = User.create(name: "Artour Babaev", email: "demo", password: "password")
 pierce_brown = User.create(name: "Pierce Brown", email: "pierce_brown@piercebrown.com", password: "password")
 tolkien = User.create(name: "J.R.R. Tolkien", email: "tolkien@tolkien.com", password: "password")
 rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", password: "password")
 
-# books
+20.times do |time|
+  newUser = User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: "password")
+  Shelf.create(name: "Read", user_id: newUser.id)
+  Shelf.create(name: "Currently Reading", user_id: newUser.id)
+  Shelf.create(name: "Want to Read", user_id: newUser.id)
+end
+
+
+
+
 
 
   red_rising = Book.create(
@@ -506,6 +516,12 @@ rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", passwo
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp7.jpg"
   )
 
+  Book.all.each do |book|
+    User.all[1..-1].sample(7).each do |user|
+      Review.create(book_id: book.id, rating: 1 + rand(5), user_id: user.id, body: Faker::HitchhikersGuideToTheGalaxy.quote)
+    end
+  end
+
   Shelf.create(name: "Read", user_id: demo.id)
   Shelf.create(name: "Currently Reading", user_id: demo.id)
   Shelf.create(name: "Want to Read", user_id: demo.id)
@@ -514,7 +530,5 @@ rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", passwo
     Shelving.create(book_id: book.id, shelf_id: demo.shelves.first.id)
   end
 
-  Review.create(book_id: red_rising.id, user_id: pierce_brown.id, rating: 5, body: "What an excellent book that I have written. I disagree wholeheartedly with any unappreciative so-called fans.")
-  Review.create(book_id: red_rising.id, user_id: rowling.id, rating: 5, body: "What an excellent book that you have written. I disagree wholeheartedly with any unappreciative so-called fans.")
 
 #here

@@ -24,7 +24,7 @@ class BookShow extends React.Component {
     let reviews = values(this.props.reviews);
     let reviewList;
     if (reviews) {
-      reviewList = reviews.map((review, idx) => (<ReviewShow key={idx} review={review}/>));
+      reviewList = reviews.reverse().map((review, idx) => (<ReviewShow key={idx} review={review}/>));
     }
 
     if (!this.props.book || !this.props.reviews) {

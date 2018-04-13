@@ -30,5 +30,15 @@ class Book < ApplicationRecord
 
   has_many :reviewers,
     through: :reviews,
-    source: :user 
+    source: :user
+
+  def average_score
+    total_points = 0
+    num_reviews = 0
+    self.reviews.each do |review|
+      total_points += review.rating
+      num_reviews += 1
+    end
+    total_points.fdiv(num_reviews).round(2)
+  end
 end
