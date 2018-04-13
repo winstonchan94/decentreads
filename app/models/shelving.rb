@@ -39,7 +39,7 @@ class Shelving < ApplicationRecord
     user.shelvings.each do |shelving|
       if (encroaching_defaults.any?{|shelf| shelf.shelvings.include?(shelving)} &&
         shelving.book_id == self.book_id &&
-        ['Read', 'Currently Reading', 'Want to Read'].include?(shelving.shelf.name))
+        defaults.include?(shelving.shelf.name))
           @shelf_to_remove_from = shelving.shelf_id
           shelving.destroy
       end
