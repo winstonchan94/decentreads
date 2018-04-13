@@ -56,7 +56,7 @@
   margin-bottom: 10px;
 }
 
-.book-description p {
+.book-description li {
   margin-bottom: 10px;
 }
 
@@ -64,6 +64,10 @@
   line-height: 20px;
   font-size: 18px;
   margin-bottom: 20px;
+  height: 300px;
+  overflow: scroll;
+  padding: 0 15px 0 0;
+  list-style: none;
 }
 
 .book-publish-info {
@@ -72,7 +76,39 @@
   font-size: 12px;
 }
 
-.return-link {
-  margin-left: 25%;
-  margin-top: 10px;
+.reviews-box {
+  align-self: center;
+  max-width: 40%;
+  margin: auto;
+  padding: 10px;
+  margin-top: 20px;
 }
+
+.reviews-box-header {
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 0 20px 0;
+  margin-bottom: 20px;
+}
+
+.review-details {
+  padding: 0 20px 20px 20px;
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 20px; 
+}
+
+.reviewer-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.review-item-header {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.review-body {
+  font-size: 16px
+}
+//here

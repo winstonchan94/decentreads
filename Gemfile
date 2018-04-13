@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 ruby '2.5.0'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'paperclip', '5.0.0'
 gem 'better_errors'
 gem 'binding_of_caller'

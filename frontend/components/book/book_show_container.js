@@ -8,9 +8,13 @@ import BookShow from './book_show';
 const mapStateToProps = (state, { match }) => {
   const bookId = parseInt(match.params.bookId);
   const book = selectBook(state, match.params.bookId);
+  const reviews = state.entities.reviews;
+  const currentUser = state.session.currentUser;
   return {
     bookId,
-    book
+    book,
+    reviews,
+    currentUser, 
   };
 };
 

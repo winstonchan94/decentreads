@@ -7,12 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Book.destroy_all
+Review.destroy_all
 # users
 
 demo = User.create(name: "demo", email: "demo", password: "password")
 pierce_brown = User.create(name: "Pierce Brown", email: "pierce_brown@piercebrown.com", password: "password")
 tolkien = User.create(name: "J.R.R. Tolkien", email: "tolkien@tolkien.com", password: "password")
 rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", password: "password")
+
 # books
 
 
@@ -511,5 +513,8 @@ rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", passwo
   Book.all.each do |book|
     Shelving.create(book_id: book.id, shelf_id: demo.shelves.first.id)
   end
+
+  Review.create(book_id: red_rising.id, user_id: pierce_brown.id, rating: 5, body: "What an excellent book that I have written. I disagree wholeheartedly with any unappreciative so-called fans.")
+  Review.create(book_id: red_rising.id, user_id: rowling.id, rating: 5, body: "What an excellent book that you have written. I disagree wholeheartedly with any unappreciative so-called fans.")
 
 #here

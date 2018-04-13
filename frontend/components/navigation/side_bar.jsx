@@ -19,7 +19,7 @@ class SideBar extends React.Component {
           <ul className="shelf-list">
             <li className="shelf-list-item">
               <Link className="shelf-list-link"
-                to={`/mybooks/all`}>All</Link>
+                to={`/mybooks/all`}>All ({this.props.currentUser.bookIds.length})</Link>
             </li>
             {
               shelves.map(
@@ -29,7 +29,7 @@ class SideBar extends React.Component {
                       return (<li key={shelf.id} className="shelf-list-item">
                         <Link
                           className="shelf-list-link"
-                          to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
+                          to={`/mybooks/shelf/${shelf.id}`}>{shelf.name} ({shelf.bookIds.length})</Link>
                         <button
                           className="shelf-delete-button"
                           onClick={() => {
@@ -39,7 +39,7 @@ class SideBar extends React.Component {
                     }
                   else {
                       return (<li key={shelf.id} className="shelf-list-item">
-                        <Link className="shelf-list-link" to={`/mybooks/shelf/${shelf.id}`}>{shelf.name}</Link>
+                        <Link className="shelf-list-link" to={`/mybooks/shelf/${shelf.id}`}>{shelf.name} ({shelf.bookIds.length})</Link>
                       </li>);
                 }
               })
