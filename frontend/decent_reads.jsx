@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { requestBook, requestBooks } from './actions/books_actions';
+import { requestBook, requestBooks } from './actions/book_actions';
 import { requestShelf, requestShelves, destroyShelf, addShelving, destroyShelving } from './actions/shelf_actions';
 document.addEventListener('DOMContentLoaded', () => {
   let store;

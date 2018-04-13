@@ -63,6 +63,7 @@ class ReadStatus extends React.Component {
       return (
         <form className="read-status-form" onSubmit={this.handleSubmit}>
           <select onChange={this.update('shelfId')}>
+            <option value="" disabled selected>Select Shelf</option>
             {options}
           </select>
           <input type="submit" value="Add to Shelf" className="read-status-button"/>

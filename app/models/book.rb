@@ -25,4 +25,10 @@ class Book < ApplicationRecord
     class_name: :User
 
   has_many :shelvings
+
+  has_many :reviews
+
+  has_many :reviewers,
+    through: :reviews,
+    source: :user 
 end

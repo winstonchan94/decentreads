@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { clearBooks } from '../../actions/books_actions';
+import { clearBooks } from '../../actions/book_actions';
 import { requestShelf } from '../../actions/shelf_actions';
 import { selectShelf, selectBooksFromShelf} from '../../reducers/selectors';
 import ShelfShow from './shelf_show';

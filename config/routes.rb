@@ -5,9 +5,12 @@ Rails.application.routes.draw do
       resources :shelves, only: [:index]
     end
     resource :session, only: [:create, :destroy]
-    resources :books, only: [:create, :show, :index]
+    resources :books, only: [:create, :show, :index] do
+      resources :reviews, only: [:create, :update, :show]
+    end
     resources :shelves, only: [:create, :show, :destroy]
     resources :shelvings, only: [:create, :destroy]
+    resources :reviews, only: [:destroy]
   end
 
   delete '/api/shelvings', to: "api/shelvings#destroy"

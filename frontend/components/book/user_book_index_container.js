@@ -3,7 +3,7 @@ import { selectAllUserBooks } from '../../reducers/selectors';
 import {
   receiveBooks,
   requestBooks
-} from '../../actions/books_actions';
+} from '../../actions/book_actions';
 import BookIndex from './book_index';
 
 const mapStateToProps = state => ({

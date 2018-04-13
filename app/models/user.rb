@@ -39,6 +39,12 @@ class User < ApplicationRecord
     through: :shelves,
     source: :books
 
+  has_many :reviews
+
+  has_many :reviewed_books,
+    through: :reviews,
+    source: :book 
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

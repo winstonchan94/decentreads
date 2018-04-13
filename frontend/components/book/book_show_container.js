@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { requestBook } from '../../actions/books_actions';
+import { requestBook } from '../../actions/book_actions';
 import { selectBook } from '../../reducers/selectors';
 import BookShow from './book_show';
 

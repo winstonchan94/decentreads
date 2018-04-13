@@ -9,9 +9,9 @@ export const receiveBooks = books => ({
 });
 
 // will need to change this one to payload destructured
-export const receiveBook = book => ({
+export const receiveBook = payload => ({
   type: RECEIVE_BOOK,
-  book,
+  payload,
 });
 
 export const requestBooks = () => dispatch => (
@@ -21,8 +21,8 @@ export const requestBooks = () => dispatch => (
 );
 
 export const requestBook = bookId => dispatch => (
-  APIUtil.fetchBook(bookId).then(book => (
-    dispatch(receiveBook(book))
+  APIUtil.fetchBook(bookId).then(payload => (
+    dispatch(receiveBook(payload))
   ))
 );
 export const clearBooks = () => dispatch => (

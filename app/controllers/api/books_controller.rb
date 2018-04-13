@@ -19,11 +19,6 @@ class Api::BooksController < ApplicationController
     render :index
   end
 
-  def feature
-    @books = Book.all.sample(12)
-    render :index
-  end
-
 
   private
   def book_params
