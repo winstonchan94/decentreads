@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { requestBook } from '../../actions/book_actions';
+import { requestBook, clearReviewsAction } from '../../actions/book_actions';
 import { selectBook } from '../../reducers/selectors';
 import BookShow from './book_show';
 
@@ -14,12 +14,13 @@ const mapStateToProps = (state, { match }) => {
     bookId,
     book,
     reviews,
-    currentUser, 
+    currentUser,
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestBook: id => dispatch(requestBook(id))
+  requestBook: id => dispatch(requestBook(id)),
+  clearReviews: () => dispatch(clearReviewsAction())
 });
 
 export default connect(

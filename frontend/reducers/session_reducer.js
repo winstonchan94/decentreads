@@ -31,7 +31,9 @@ const sessionReducer = (state = _nullUser, action) => {
       return newState;
     case ADD_SHELVING:
       newState = merge({}, state);
-      newState.currentUser.bookIds.unshift(action.bookId);
+      if (!newState.currentUser.bookIds.includes(action.bookId)) {
+        newState.currentUser.bookIds.unshift(action.bookId);
+      }
       return newState;
     default:
       return state;

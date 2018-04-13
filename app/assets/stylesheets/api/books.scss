@@ -84,6 +84,69 @@
   border-top: 1px solid #d3d3d3;
   font-size: 12px;
 }
+.review-form-toggle-button {
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  text-decoration: none;
+  background: #F4F1EA;
+  cursor: pointer;
+  font-family: "Merriweather";
+  color: #382110;
+  font-weight: bold;
+  width: 100px;
+  margin-left: 35%;
+}
+
+.review-form-toggle-button:hover {
+  background: #ebe6d9;
+}
+.review-form-box {
+
+  max-width: 25%;
+  margin-left: 30%;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  .review-form-button {
+    text-align: center;
+    padding: 2px 10px;
+    font-size: 12px;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    text-decoration: none;
+    background: #F4F1EA;
+    cursor: pointer;
+    font-family: "Merriweather";
+    color: #382110;
+    font-weight: bold;
+  }
+  .review-form-button:hover {
+    background: #ebe6d9;
+
+  }
+  h5 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  strong {
+    font-weight: bold;
+  }
+  .review-form-textarea {
+    height: 200px;
+    width: 600px;
+    margin-bottom: 10px;
+  }
+
+  select {
+    margin-bottom: 10px;
+    width: 200px;
+  }
+}
 
 .reviews-box {
   align-self: center;
