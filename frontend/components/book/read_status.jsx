@@ -46,10 +46,17 @@ class ReadStatus extends React.Component {
     const options = shelves.map((shelf) =>
     {
       if (shelf.bookIds.includes(this.state.bookId) && defaultShelves.includes(shelf.name)) {
-        return (<option key={shelf.id} selected="selected" value={shelf.id}>{shelf.name}</option>);
+        return (<option
+                className="read-status-option"
+                key={shelf.id}
+                selected="selected"
+                value={shelf.id}>{shelf.name}</option>);
       }
       else {
-        return (<option key={shelf.id} value={shelf.id}>{shelf.name}</option>);
+        return (<option
+                className="read-status-option"
+                key={shelf.id}
+                value={shelf.id}>{shelf.name}</option>);
       }
     }
       );
