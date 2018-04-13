@@ -93,6 +93,48 @@ To achieve this, the following lines of code were written to ensure that the del
           </li>);
         }
 ```
+Here is how the form looks when toggled:
+![Imgur](https://i.imgur.com/QKWQdZA.png)
+
+The toggling was implemented through alteration of a local state attribute within the form component:
+
+```JavaScript
+constructor(props) {
+  super(props);
+  this.state = {
+    name: '',
+    userId: this.props.currentUser.id,
+    toggleForm: false,
+  };
+  this.handleSubmit = this.handleSubmit.bind(this);
+  this.showForm = this.showForm.bind(this);
+  this.hideForm = this.hideForm.bind(this);
+
+}
+
+update(field) {
+  return e => this.setState({
+    [field]: e.currentTarget.value
+  });
+}
+
+showForm() {
+  this.setState({toggleForm: true});
+
+}
+
+hideForm() {
+  this.setState({toggleForm: false});
+}
+
+handleSubmit(e) {
+  e.preventDefault();
+  const shelf = Object.assign({}, {name: this.state.name, user_id: this.state.userId});
+  this.hideForm();
+  this.props.processForm(shelf);
+  this.setState({name: ''});
+}
+```
 #### Dynamic book shelving
 
 When a user is examining a default shelf, say "Currently Reading," for example, they are able to move any of the contained books to a different default shelf. It was paramount in such a situation that said book would disappear from the current page, as the following backend code would destroy any conflicting shelvings occurring upon creation of a new shelving:
