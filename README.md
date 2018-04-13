@@ -1,6 +1,4 @@
-# README
-
-##[DecentReads](https://www.decent-reads.herokuapp.com)
+# [DecentReads](https://www.decent-reads.herokuapp.com)
 
 
 
