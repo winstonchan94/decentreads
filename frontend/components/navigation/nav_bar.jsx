@@ -11,7 +11,7 @@ const home = (
   <Link className="nav-home" to={`/`}><h5>Home</h5></Link>
 );
 const myBooks = (
-  <Link className="nav-my-books" to={`/mybooks`}><h5>My Books</h5></Link>
+  <Link className="nav-my-books" to={`/mybooks/all`}><h5>My Books</h5></Link>
 );
 
 const sessionLinks = (demoLogin) => (

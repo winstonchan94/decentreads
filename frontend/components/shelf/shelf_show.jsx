@@ -22,13 +22,13 @@ class ShelfShow extends React.Component {
   }
 
   render() {
-    const { shelf, books } = this.props;
+    const { shelf, books, currentUser } = this.props;
     if (!this.props.books || !this.props.shelf) { return <h5>loading</h5>; } else {
     return (
       <div className="book-list-box">
         <h1 className="book-list-name">{this.props.shelf.name}</h1>
         <ul className="book-list">
-          {this.props.books.map(book => <BookIndexItem key={book.id} book={book} />)}
+          {this.props.books.map(book => <BookIndexItem key={book.id} book={book} currentUser={currentUser}/>)}
         </ul>
       </div>
     );

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { selectBooks } from '../../reducers/selectors';
+import { selectAllUserBooks } from '../../reducers/selectors';
 import {
   receiveBooks,
   requestBooks
@@ -7,8 +7,8 @@ import {
 import BookIndex from './book_index';
 
 const mapStateToProps = state => ({
-  listType: "Featured Books",
-  books: selectBooks(state),
+  listType: "All",
+  books: selectAllUserBooks(state.session.currentUser, state.entities.books),
   currentUser: state.session.currentUser
 });
 

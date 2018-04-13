@@ -17,6 +17,10 @@ class SideBar extends React.Component {
         <nav className="side-bar">
           <h5>BOOKSHELVES</h5>
           <ul className="shelf-list">
+            <li className="shelf-list-item">
+              <Link className="shelf-list-link"
+                to={`/mybooks/all`}>All</Link>
+            </li>
             {
               shelves.map(
                 shelf => {

@@ -8,6 +8,7 @@ import ShelfShow from './shelf_show';
 const mapStateToProps = (state, { match }) => {
   const shelfId = parseInt(match.params.shelfId);
   const shelf = selectShelf(state, match.params.shelfId);
+  const currentUser = state.session.currentUser;
   let books;
 
   if (shelf && shelf.bookIds) {
@@ -16,7 +17,8 @@ const mapStateToProps = (state, { match }) => {
   return {
     books,
     shelfId,
-    shelf
+    shelf,
+    currentUser
   };
 };
 

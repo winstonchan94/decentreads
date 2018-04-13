@@ -10,11 +10,11 @@ class BookIndex extends Component {
   }
 
   render() {
-    const { books, currentUser } = this.props;
+    const { books, currentUser, listType } = this.props;
     if (!this.props.books) { return 'loading'; } else {
     return (
       <div className="book-list-box">
-        <h1 className="book-list-name">Featured Books</h1>
+        <h1 className="book-list-name">{listType}</h1>
         <ul className="book-list">
           {books.map(book => <BookIndexItem key={book.id} book={book} currentUser={currentUser}/>)}
         </ul>

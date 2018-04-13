@@ -8,6 +8,10 @@ export const selectBooksFromShelf = (shelf, books) => {
   return (shelf.bookIds.map(bookId => books[bookId]).filter( el => el));
 };
 
+export const selectAllUserBooks = (user, books) => {
+  return (user.bookIds.map(bookId => books[bookId]).filter( el => el));
+};
+
 export const selectBook = (state, id) => (
   state.entities.books[id]
 );
