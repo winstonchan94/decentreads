@@ -18,11 +18,7 @@ class Review < ApplicationRecord
   belongs_to :user
   belongs_to :book
 
-  attr_accessor :editable
 
 
 
-  def editable
-    current_user == self.user
-  end
 end
