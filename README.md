@@ -174,6 +174,7 @@ case ADD_SHELVING:
   }
   return newState;
 ```
+The above code removed the offending book's id from the bookIds array of the shelf's slice of state, thus altering the props in the component and affecting the objects rendered.
 ## Future Plans
 Future updates will include but are not limited to:
 
