@@ -15,7 +15,10 @@ demo = User.create(name: "Artour Babaev", email: "demo", password: "password")
 pierce_brown = User.create(name: "Pierce Brown", email: "pierce_brown@piercebrown.com", password: "password")
 tolkien = User.create(name: "J.R.R. Tolkien", email: "tolkien@tolkien.com", password: "password")
 rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", password: "password")
-
+hawking = User.create(name: "Stephen Hawking", email: "hawking", password: "password")
+dumas = User.create(name: "Alexandre Dumas", email: "dumas", password: "password")
+plato = User.create(name: "Plato", email: "plato", password: "password")
+marcus = User.create(name: "Marcus Aurelius", email: "marcus", password: "password")
 20.times do |time|
   newUser = User.create(name: Faker::Name.unique.name, email: Faker::Internet.unique.email, password: "password")
   Shelf.create(name: "Read", user_id: newUser.id)
@@ -23,7 +26,7 @@ rowling = User.create(name: "J.K. Rowling", email: "rowling@rowling.com", passwo
   Shelf.create(name: "Want to Read", user_id: newUser.id)
 end
 
-
+seedUsers = User.all.select{|user| user.id != demo.id}
 
 
 
@@ -516,8 +519,141 @@ end
     cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523381457/hp7.jpg"
   )
 
+  Book.create(
+    title: "A Brief History of Time",
+    author_id: hawking.id,
+    publisher: "Bantam Books",
+    publish_date: "September 1st 1998",
+    description: ["In the ten years since its publication in 1988,
+      Stephen Hawking's classic work has become a landmark volume in
+      scientific writing, with more than nine million copies in forty
+      languages sold worldwide. That edition was on the cutting edge of
+      what was then known about the origins and nature of the universe.
+      But the intervening years have seen extraordinary advances in the
+      technology of observing both the micro- and the macrocosmic worlds.
+      These observations have confirmed many of Professor Hawking's
+      theoretical predictions in the first edition of his book, including
+      the recent discoveries of the Cosmic Background Explorer satellite
+      (COBE), which probed back in time to within 300,000 years of the
+      universe's beginning and revealed wrinkles in the fabric of
+      space-time that he had projected. Eager to bring to his original
+      text the new knowledge revealed by these observations, as well as
+      his own recent research, Professor Hawking has prepared a new
+      introduction to the book, written an entirely new chapter on
+      wormholes and time travel, and updated the chapters throughout."],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/brief_hist.jpg"
+  )
+
+  Book.create(
+    title: "The Grand Design",
+    author_id: hawking.id,
+    publisher: "Bantam Books",
+    publish_date: "September 7th 2010",
+    description: ["THE FIRST MAJOR WORK IN NEARLY A DECADE BY ONE OF
+      THE WORLD’S GREAT THINKERS—A MARVELOUSLY CONCISE BOOK WITH NEW
+      ANSWERS TO THE ULTIMATE QUESTIONS OF LIFE",
+
+      "When and how did the
+      universe begin? Why are we here? Why is there something rather
+      than nothing? What is the nature of reality? Why are the laws
+      of nature so finely tuned as to allow for the existence of
+      beings like ourselves? And, finally, is the apparent “grand
+      design” of our universe evidence of a benevolent creator who
+      set things in motion—or does science offer another explanation?"],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/grand_design.jpg"
+  )
+
+  Book.create(
+    title: "The Universe in a Nutshell",
+    author_id: hawking.id,
+    publisher: "Bantam Books",
+    publish_date: "November 6th 2001",
+    description: [
+      "Stephen Hawking’s phenomenal, multimillion-copy bestseller,
+      A Brief History of Time, introduced the ideas of this brilliant
+      theoretical physicist to readers all over the world.",
+
+      "Now, in a major publishing event, Hawking returns with a
+      lavishly illustrated sequel that unravels the mysteries of the
+      major breakthroughs that have occurred in the years since the
+      release of his acclaimed first book."
+    ],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/nutshell.jpg"
+  )
+
+  Book.create(
+    title: "A Briefer History of Time",
+    author_id: hawking.id,
+    publisher: "Bantam Books",
+    publish_date: "September 27th 2005",
+    description: [
+      "Now, in a major publishing event, Hawking returns with a lavishly illustrated sequel that unravels the mysteries of the major breakthroughs that have occurred in the years since the release of his acclaimed first book.",
+      "Although “briefer,” this book is much more than a mere explanation of Hawking’s earlier work. A Briefer History of Time both clarifies and expands on the great subjects of the original, and records the latest developments in the field—from string theory to the search for a unified theory of all the forces of physics. Thirty-seven full-color illustrations enhance the text and make A Briefer History of Time an exhilarating and must-have addition in its own right to the great literature of science and ideas."
+    ],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/briefer.jpg"
+  )
+
+  Book.create(
+    title: "Black Holes and Baby Universes",
+    author_id: hawking.id,
+    publisher: "Bantam Books",
+    publish_date: "September 1st 1994",
+    description: [
+      "NY Times bestseller. 13 extraordinary essays shed new light on the mysteries of the universe & on one of the most brilliant thinkers of our time.
+In his phenomenal bestseller A Brief History of Time, Stephen Hawking literally transformed the way we think about physics, the universe, reality itself. In these thirteen essays and one remarkable extended interview, the man widely regarded as the most brilliant theoretical physicist since Einstein returns to reveal an amazing array of possibilities for understanding our universe. Building on his earlier work, Hawking discusses imaginary time, how black holes can give birth to baby universes, and scientists’ efforts to find a complete unified theory that would predict everything in the universe. With his characteristic mastery of language, his sense of humor and commitment to plain speaking, Stephen Hawking invites us to know him better—and to share his passion for the voyage of intellect and imagination that has opened new ways to understanding the very nature of the cosmos."
+],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/black_holes.jpg"
+  )
+
+  Book.create(
+    title: "The Theory of Everything: The Origin and Fate of the Universe",
+    author_id: hawking.id,
+    publisher: "New Millennium Entertainment",
+    publish_date: "May 15th 2002",
+    description: [
+      'Based on a series of lectures given at Cambridge University, Professor Hawking''s work introduced "the history of ideas about the universe" as well as today''s most important scientific theories about time, space, and the cosmos in a clear, easy-to-understand way. "The Theory of Everything" presents the most complex theories, both past and present, of physics; yet it remains clear and accessible. It will enlighten readers and expose them to the rich history of scientific thought and the complexities of the universe in which we live.'
+    ],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/everything.jpg"
+  )
+
+  Book.create(
+    title: "The Count of Monte Cristo",
+    author_id: dumas.id,
+    publisher: "Penguin Classics",
+    publish_date: "May 27th 2003",
+    description: [
+      "In 1815 Edmond Dantès, a young and successful merchant sailor who has just recently been granted the succession of his erstwhile captain Leclère, returns to Marseille to marry his Catalan fiancée Mercédès. Thrown in prison for a crime he has not committed, Edmond Dantès is confined to the grim fortress of If. There he learns of a great hoard of treasure hidden on the Isle of Monte Cristo and he becomes determined not only to escape, but also to unearth the treasure and use it to plot the destruction of the three men responsible for his incarceration."
+    ],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/monte_cristo.jpg"
+  )
+
+  Book.create(
+    title: "The Republic",
+    author_id: plato.id,
+    publisher: "Penguin Classics",
+    publish_date: "February 25th 2003",
+    description: [
+      "Presented in the form of a dialogue between Socrates and three different interlocutors, this classic text is an enquiry into the notion of a perfect community and the ideal individual within it. During the conversation, other questions are raised: what is goodness?; what is reality?; and what is knowledge? The Republic also addresses the purpose of education and the role of both women and men as guardians of the people. With remarkable lucidity and deft use of allegory, Plato arrives at a depiction of a state bound by harmony and ruled by philosopher kings"
+    ],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/the_repub.jpg"
+  )
+
+  Book.create(
+    title: "Meditations",
+    author_id: marcus.id,
+    publisher: "Wisehouse Classics",
+    publish_date: "December 7th 2015",
+    description: [
+      'MEDITATIONS (Medieval Greek: Τὰ εἰς ἑαυτόν Ta eis heauton, literally "to himself") is a series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.
+
+Marcus Aurelius wrote the 12 books of the Meditations in Koine Greek as a source for his own guidance and self-improvement. It is possible that large portions of the work were written at Sirmium, where he spent much time planning military campaigns from 170 to 180. Some of it was written while he was positioned at Aquincum on campaign in Pannonia, because internal notes tell us that the first book was written when he was campaigning against the Quadi on the river Granova (modern-day Hron) and the second book was written at Carnuntum.
+
+It is unlikely that Marcus Aurelius ever intended the writings to be published and the work has no official title, so Meditations is one of several titles commonly assigned to the collection. These writings take the form of quotations varying in length from one sentence to long paragraphs.'
+],
+    cover_url: "https://res.cloudinary.com/ddcscckq0/image/upload/v1523651498/meditations.jpg"
+  )
   Book.all.each do |book|
-    User.all[1..-1].sample(7).each do |user|
+    seedUsers.sample(7).each do |user|
       Review.create(book_id: book.id, rating: 1 + rand(5), user_id: user.id, body: Faker::HitchhikersGuideToTheGalaxy.quote)
     end
   end
@@ -526,7 +662,7 @@ end
   Shelf.create(name: "Currently Reading", user_id: demo.id)
   Shelf.create(name: "Want to Read", user_id: demo.id)
 
-  Book.all.each do |book|
+  Book.all.sample(16).each do |book|
     Shelving.create(book_id: book.id, shelf_id: demo.shelves.first.id)
   end
 
