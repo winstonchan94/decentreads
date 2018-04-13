@@ -30,7 +30,7 @@ const App = () => {
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <Route exact path="/" component={BookIndexContainer} />
           <Route path="/books/:bookId" component={BookShowContainer} />
-          <Route path="/mybooks/all" component={UserBookIndexContainer} />
+          <ProtectedRoute path="/mybooks/all" component={UserBookIndexContainer} />
           <Route path="/mybooks/shelf/:shelfId" component={ShelfShowContainer}/>
         </Switch>
       </div>

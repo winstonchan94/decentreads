@@ -53,12 +53,17 @@
 .book-author {
   font-size: 18px;
   font-weight: none;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .book-avg-score {
   font-size: 12px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   margin-left: 10px;
+}
+
+.book-avg-score strong {
+  font-size: 14px;
+  font-weight: bold;
 }
 .book-description li {
   margin-bottom: 10px;
@@ -69,7 +74,7 @@
   font-size: 18px;
   margin-bottom: 20px;
   height: 300px;
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 0 15px 0 0;
   list-style: none;
 }

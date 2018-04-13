@@ -18,7 +18,7 @@ const BookDetail = ({book, currentUser}) => {
         <header>
           <h2 className="book-title">{book.title}</h2>
           <p className="book-author">by {book.author.name}</p>
-          <h6 className="book-avg-score">Avg. rating {book.averageScore}</h6>
+          <h6 className="book-avg-score">avg. rating <strong>{book.averageScore}</strong></h6>
         </header>
         <p className="book-description">{description}</p>
         <p className="book-publish-info">Published {book.publish_date} by {book.publisher}</p>

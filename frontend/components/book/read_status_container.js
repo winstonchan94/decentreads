@@ -6,13 +6,9 @@ import ReadStatus from './read_status';
 
 //destructured from ownProps
 const mapStateToProps = (state) => {
-  if (state.session.curentUser) {
-    return ({
-      shelves: state.session.currentUser.shelves
-    });
-  } else {
-    return ({});
-  }
+  return ({
+    shelves: state.session.currentUser.shelves
+  });
 };
 
 const mapDispatchToProps = dispatch => ({
