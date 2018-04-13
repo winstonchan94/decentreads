@@ -1,4 +1,4 @@
-# [DecentReads](https://www.decent-reads.herokuapp.com)
+# [DecentReads](decent-reads.herokuapp.com)
 
 
 
