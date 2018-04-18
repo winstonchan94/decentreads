@@ -93,8 +93,6 @@ To achieve this, the following lines of code were written to ensure that the del
           </li>);
         }
 ```
-Here is how the form looks when toggled:
-![Imgur](https://i.imgur.com/QKWQdZA.png)
 
 The toggling was implemented through alteration of a local state attribute within the form component:
 

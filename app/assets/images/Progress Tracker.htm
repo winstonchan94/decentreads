@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://progress.appacademy.io/me/final_projects/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<script type="text/javascript" src="./Progress Tracker_files/3139d07607"></script><script src="./Progress Tracker_files/nr-1071.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3139d07607","applicationID":"6682900","transactionName":"IVxeFkIMCl4EFkkJXU1VWQxRDzlCEwsMAVsWQB8MVRQ=","queueTime":5,"applicationTime":34,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  
+  <title>Progress Tracker</title>
+  <script src="./Progress Tracker_files/shared_bundle-1389f997a4603038759b42b94522043404cfd64048cd75e4e77375564dca9a15.js"></script>
+  <script src="./Progress Tracker_files/me_bundle-13e1f4ac8d926d2eba3cc1da2e8cc2e786c69a8701bc7338cb279fa5f418d9c7.js"></script>
+  <link rel="stylesheet" media="screen" href="./Progress Tracker_files/css">
+  <link rel="stylesheet" media="screen" href="./Progress Tracker_files/application-568387e44ff70ed733a1d00c06081ec11f88ef36671fc27192db88fa4f5421cc.css">
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="zmWYD8VIw1vwOrTQqjeAgAW1mIp+VcA2nMGHA8Bj3O1OUzY/iNItxuYghzweSD7wf5CqGBGc9lJ2s1KeQJoiJA==">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="vsc-initialized">
+    <header class="header">
+  <nav class="group">
+    <div class="header-left">
+      <a id="dashboard" href="https://progress.appacademy.io/me" class="student-nav-link logo">Progress Tracker</a>
+
+      <ul class="nav-links group">
+        <li>
+          <a id="assessments" href="https://progress.appacademy.io/me/assessments" class="student-nav-link">Assessments</a>
+        </li>
+
+        <li>
+          <a id="students" href="https://progress.appacademy.io/me/students" class="student-nav-link">Classmates</a>
+        </li>
+
+        <li>
+          <a id="final-projects" href="https://progress.appacademy.io/final_projects" class="student-nav-link selected">Final Projects</a>
+        </li>
+
+
+        <li>
+          <a href="http://report.appacademy.io/?city=SF">Anonymous Report</a>
+        </li>
+
+        <li>
+          <a href="https://progress.appacademy.io/me/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-right">
+      <h3 class="menu"></h3>
+
+      <h3 class="student-profile-display" id="open-dropdown">
+        <img class="student-profile-pic" src="./Progress Tracker_files/Winston_Chan_2.jpg">
+
+        <strong class="student-header-name">
+          Winston Chan
+        </strong>
+      </h3>
+
+      <ul class="nav-dropdown">
+        <li>
+          <a href="https://progress.appacademy.io/me/badge">Your Badge</a>
+        </li>
+        
+        <li>
+          <a href="https://progress.appacademy.io/me/student">Your Stats</a>
+        </li>
+
+        <li>
+          <a href="https://progress.appacademy.io/me/student/edit">Your Profile</a>
+        </li>
+
+        <li>
+          <a href="https://progress.appacademy.io/me/quizzes">Your Quizzes</a>
+        </li>
+
+        <li>
+          <form action="https://progress.appacademy.io/me/sign_out" method="post">
+                  <input type="hidden" name="authenticity_token" value="zmWYD8VIw1vwOrTQqjeAgAW1mIp+VcA2nMGHA8Bj3O1OUzY/iNItxuYghzweSD7wf5CqGBGc9lJ2s1KeQJoiJA==">
+
+            <input type="hidden" name="_method" value="delete">
+            <button>Sign Out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  $(function () {
+    $(".header-right").on("click", function (e) {
+      $(this).closest("nav").toggleClass("open");
+    });
+  });
+</script>
+
+
+    <main class="overflow">
+      <section class="content">
+        <figure class="snackbox"></figure>
+        
+<header class="page-header">
+  <h1>Edit Final Project</h1>
+  <a href="https://progress.appacademy.io/final_projects">Back to Final Projects</a>
+</header>
+
+
+
+
+
+
+<form class="standard" action="https://progress.appacademy.io/me/final_projects" method="post">
+        <input type="hidden" name="authenticity_token" value="zmWYD8VIw1vwOrTQqjeAgAW1mIp+VcA2nMGHA8Bj3O1OUzY/iNItxuYghzweSD7wf5CqGBGc9lJ2s1KeQJoiJA==">
+
+
+
+  <fieldset>
+    <label for="name">Name</label>
+    <input id="name" type="text" name="final_project[name]" value="" placeholder="Your project&#39;s title">
+  </fieldset>
+
+  <fieldset>
+    <label for="url">URL</label>
+    <input id="url" type="url" name="final_project[url]" value="" placeholder="http://your-final-project.io">
+  </fieldset>
+
+  <fieldset>
+    <label for="github">Github repo</label>
+    <input id="github" type="url" name="final_project[github]" value="" placeholder="URL to your app&#39;s Github repo">
+  </fieldset>
+
+  <fieldset>
+    <label for="description">Description</label>
+    <textarea id="description" name="final_project[description]" placeholder="Project description"></textarea>
+  </fieldset>
+
+  <article id="clone-selection" data-clone-select=".clone-select" data-new-clone-input=".new-clone">
+
+    <fieldset>
+      <label for="clone">What app are you cloning?</label>
+      <input id="app_clone" type="text" name="final_project[app_clone]" value="" placeholder="Name &amp; URL of cloned app" autocomplete="off">
+
+      <input id="app_clone_id" type="hidden" name="final_project[app_clone_id]" value="">
+
+      <ul class="clone-select"></ul>
+    </fieldset>
+
+    <figure class="new-clone">
+      <fieldset>
+        <label for="clone_title">Clone of what web app?</label>
+        <input id="app_clone_title" type="text" name="app_clone[title]" placeholder="Clone Title">
+      </fieldset>
+
+      <fieldset>
+        <label for="clone_url">URL of original web app</label>
+        <input id="app_clone_url" type="url" name="app_clone[url]" placeholder="Clone URL">
+
+        <a href="javascript:void(0)">Search again</a>
+      </fieldset>
+    </figure>
+  </article>
+
+  <div class="button-wrapper">
+    <button>Submit</button>
+  </div>
+</form>
+
+<script type="application/json" id="app_clones">
+
+  [{"id":1,"title":"Gmail (http://gmail.com)"},{"id":2,"title":"Yelp (http://yelp.com)"},{"id":3,"title":"Tumblr (http://tumblr.com)"},{"id":4,"title":"Facebook (http://facebook.com)"},{"id":5,"title":"Goodreads (http://goodreads.com)"},{"id":6,"title":"OKCupid (http://okcupid.com)"},{"id":7,"title":"SoundCloud (http://soundcloud.com)"},{"id":8,"title":"Evernote (http://evernote.com)"},{"id":9,"title":"Twitch (http://twitch.tv)"},{"id":10,"title":"Poll Everywhere (http://polleverywhere.com)"},{"id":11,"title":"AirBnB (http://airbnb.com)"},{"id":12,"title":"Urban Dictionary (http://urbandictionary.com)"},{"id":13,"title":"Mint (http://mint.com)"},{"id":14,"title":"Meetup (http://meetup.com)"},{"id":15,"title":"TaskRabbit (https://www.taskrabbit.com/)"},{"id":16,"title":"Craigslist (http://craigslist.com)"},{"id":17,"title":"MyFitnessPal (http://http://www.myfitnesspal.com/)"},{"id":18,"title":"Weather Underground (http://wunderground.com)"},{"id":19,"title":"Change.org (http://change.org)"},{"id":20,"title":"StreetEasy (http://streeteasy.com)"},{"id":21,"title":"gist.github.com (http://gist.github.com)"},{"id":22,"title":"Ravelry (http://ravelry.com)"},{"id":23,"title":"deviantArt (http://deviantart.com)"},{"id":24,"title":"Genius (http://genius.com)"},{"id":25,"title":"8tracks (http://8tracks.com)"},{"id":26,"title":"Quartz (http://qz.com)"},{"id":27,"title":"Flixster (http://flixster.com)"},{"id":28,"title":"Workflowy (http://workflowy.com)"},{"id":29,"title":"Stack Overflow (http://stackoverflow.com)"},{"id":30,"title":"Medium (http://medium.com)"},{"id":31,"title":"Picasa (http://picasa.google.com)"},{"id":32,"title":"Instructables (http://instructables.com)"},{"id":33,"title":"99dresses (http://99dresses.com)"},{"id":34,"title":"Reddit (http://reddit.com)"},{"id":35,"title":"Pinterest (http://pinterest.com)"},{"id":36,"title":"Allrecipes (http://allrecipes.com)"},{"id":37,"title":"Canopy (http://canopy.co)"},{"id":38,"title":"Feedly (http://feedly.com)"},{"id":39,"title":"Wunderlist (http://wunderlist.com)"},{"id":40,"title":"Etsy (http://etsy.com)"},{"id":41,"title":"Twitter (http://twitter.com)"},{"id":42,"title":"Instagram (http://instagram.com)"},{"id":43,"title":"GroupMe (https://groupme.com/)"},{"id":44,"title":"Kickstarter (http://kickstarter.com)"},{"id":45,"title":"Shopify (http://www.shopify.com/)"},{"id":46,"title":"Flickr (https://www.flickr.com/)"},{"id":47,"title":"Coursera (https://www.coursera.org/)"},{"id":48,"title":"Wufoo (http://www.wufoo.com/)"},{"id":49,"title":"Amazon (http://www.amazon.com/)"},{"id":50,"title":"Songkick (https://www.songkick.com)"},{"id":51,"title":"bandcamp (http://bandcamp.com/)"},{"id":52,"title":"Artstack (http://theartstack.com/)"},{"id":53,"title":"investing competition  (http://finance.google.com)"},{"id":54,"title":"Sporcle (http://www.sporcle.com/)"},{"id":55,"title":"Memrise (http://www.memrise.com/)"},{"id":56,"title":"RateMyProfessors (http://www.ratemyprofessors.com)"},{"id":57,"title":"Dominion Strategy Forum (http://forum.dominionstrategy.com/)"},{"id":58,"title":"Chouchsurfing (http://couchsurfing.org)"},{"id":59,"title":"Fiverr (http://www.fiverr.com)"},{"id":60,"title":"PredictionBook (http://predictionbook.com/)"},{"id":61,"title":"Meetup in Padmapper View (http://www.padmapper.com/)"},{"id":62,"title":"Square branch for online appointments  (https://squareup.com/appointments/)"},{"id":63,"title":"DayOne (http://dayoneapp.com/)"},{"id":64,"title":"Venmo (https://venmo.com/)"},{"id":65,"title":"Pivotal Tracker (http://www.pivotaltracker.com/)"},{"id":66,"title":"Yummly (http://www.yummly.com/)"},{"id":67,"title":"Steam (http://store.steampowered.com/)"},{"id":68,"title":"Blackboard (http://www.blackboard.com/)"},{"id":69,"title":"HowLongToBeat (http://www.howlongtobeat.com/)"},{"id":70,"title":"Instacart (https://www.instacart.com)"},{"id":71,"title":"Wordpress (http://www.wordpress.com/)"},{"id":72,"title":"StudyBlue (https://www.studyblue.com/)"},{"id":73,"title":"Hype Machine (http://hypem.com/)"},{"id":74,"title":"Tweet Map (http://onemilliontweetmap.com/)"},{"id":75,"title":"HabitRPG (https://habitrpg.com/static/front)"},{"id":76,"title":"NationStates (http://www.nationstates.net/)"},{"id":77,"title":"Trello with Github Integration (http://www.trello.com)"},{"id":78,"title":"MapCrunch (http://mapcrunch.com)"},{"id":79,"title":"Imgur (http://imgur.com/)"},{"id":80,"title":"TrueCar (https://www.truecar.com/)"},{"id":81,"title":"CodePen (http://codepen.io/)"},{"id":82,"title":"PetFinder (http://www.petfinder.com)"},{"id":83,"title":"Quora (http://www.quora.com/)"},{"id":84,"title":"Duolingo (http://www.duolingo.com)"},{"id":85,"title":"LinkedIn (http://linkedin.com)"},{"id":86,"title":"Delicious (https://delicious.com)"},{"id":87,"title":"UNTAPPD (https://untappd.com/)"},{"id":88,"title":"Brainscape (https://www.brainscape.com/)"},{"id":89,"title":"Flotrackr (http://www.flotrack.org/page/Flotrackr)"},{"id":90,"title":"wix.com (http://wix.com)"},{"id":91,"title":"vsco (http://grid.vsco.co/feed/signup)"},{"id":92,"title":"Kayak (http://www.kayak.com/)"},{"id":93,"title":"Zillow (http://www.zillow.com/)"},{"id":94,"title":"GitHub (https://github.com/)"},{"id":95,"title":"Slack (http://Slack.com)"},{"id":96,"title":"Product Hunt (http://www.producthunt.com/)"},{"id":97,"title":"Flipboard (http://www.flipboard.com)"},{"id":98,"title":"Scribd (https://www.scribd.com/)"},{"id":99,"title":"Yik Yak (http://www.yikyakapp.com)"},{"id":100,"title":"Original (http://www.google.com)"},{"id":101,"title":"getAround (https://www.getaround.com/)"},{"id":102,"title":"PixieSet (http://pixieset.com)"},{"id":103,"title":"FlightFox (https://flightfox.com/)"},{"id":104,"title":"hotornot (https://hotornot.com)"},{"id":105,"title":"CauseVox (http://www.causevox.com)"},{"id":106,"title":"NewsBlur (https://newsblur.com/)"},{"id":107,"title":"Lichess (https://lichess.org)"},{"id":108,"title":"Twitter heat map (sort of) (http://www.tweheat.com/)"},{"id":109,"title":"Vimeo (https://vimeo.com/)"},{"id":110,"title":"Anki (http://ankiweb.net)"},{"id":111,"title":"DigitalNYC (http://www.digital.nyc/map)"},{"id":112,"title":"Bill Splitter (https://www.bill-splitter.com)"},{"id":113,"title":"basecamp (https://www.basecamp.com)"},{"id":114,"title":"PepperPlate (http://www.pepperplate.com)"},{"id":115,"title":"Nomad List (https://nomadlist.com/)"},{"id":116,"title":"Tea with Strangers (http://www.teawithstrangers.com/)"},{"id":117,"title":"9gag (http://www.9gag.com)"},{"id":118,"title":"Challonge (http://challonge.com/)"},{"id":119,"title":"Every Trail (http://www.everytrail.com/)"},{"id":120,"title":"SeekingAlpha (http://www.seekingalpha.com)"},{"id":121,"title":"Vayable (http://www.vayable.com)"},{"id":122,"title":"indiegogo (http://indiegogo.com)"},{"id":123,"title":"(original) (https://www.tumblr.com/dashboard)"},{"id":124,"title":"ProjectPartner (https://www.projectpartner.co)"},{"id":125,"title":"fitbit dashboard (https://www.fitbit.com)"},{"id":126,"title":"NY Times Crossword (http://www.nytimes.com/crosswords)"},{"id":127,"title":"Viator (http://www.viator.com/)"},{"id":128,"title":"CodeAcademy (http://www.codeacademy.com)"},{"id":129,"title":"Asana (https://app.asana.com/)"},{"id":130,"title":"No Kicker (http://www.fleaflicker.com/)"},{"id":131,"title":"IMDB (http://www.imdb.com)"},{"id":132,"title":"Flea Flicker (http://www.fleaflicker.com)"},{"id":133,"title":"Not  Clone (https://classy-seating-app.herokuapp.com/)"},{"id":134,"title":"Codecademy (http://www.codecademy.com)"},{"id":135,"title":"Not a Clone (http://www.classy-classroom.com/)"},{"id":136,"title":"(original) (http://www.hamstertracker.me/)"},{"id":137,"title":"Epicurious (http://www.epicurious.com)"},{"id":138,"title":"Google Sheets (https://docs.google.com/spreadsheets/)"},{"id":139,"title":"Discogs (http://www.discogs.com/)"},{"id":140,"title":"Indeed (http://www.indeed.com)"},{"id":141,"title":"Feastly (https://eatfeastly.com/)"},{"id":142,"title":"EatStreet (https://eatstreet.com/)"},{"id":143,"title":"RapGenius (http://rap.genius.com/)"},{"id":144,"title":"Outbound Collective (https://www.theoutbound.com/)"},{"id":145,"title":"Repl.it (https://repl.it/languages/javascript)"},{"id":146,"title":"Wikipedia (http://en.wikipedia.org)"},{"id":147,"title":"LogARun (http://www.logarun.com/default.aspx)"},{"id":148,"title":"Chartio (https://chartio.com)"},{"id":149,"title":"Codewars (http://www.codewars.com/)"},{"id":150,"title":"WWOOF USA (https://wwoofusa.org/)"},{"id":151,"title":"Flickr/Mapcrunch (http://flickr.com)"},{"id":152,"title":"Flickr/Mapcrunch (http://www.mapcrunch.com)"},{"id":153,"title":"Seamless (https://www.seamless.com/)"},{"id":154,"title":"Shelter Manager (https://us1.sheltermanager.com/login?smaccount=demo\u0026?smaccount=demo\u0026username=demo\u0026password=demo)"},{"id":155,"title":"BeerAdvocate (http://www.beeradvocate.com)"},{"id":156,"title":"StackExchange (http://stackexchange.com/)"},{"id":157,"title":"MapMyRide (http://www.mapmyride.com/)"},{"id":158,"title":"Movieo.me (http://movieo.me/)"},{"id":159,"title":"Eventbrite (https://www.eventbrite.com/)"},{"id":160,"title":"DinDin (http://www.dindin.io)"},{"id":161,"title":"typing.io (https://typing.io)"},{"id":162,"title":"FoodSpotting (http://www.foodspotting.com/find/in/San-Francisco-CA-USA)"},{"id":163,"title":"StockTwits (http://www.stocktwits.com)"},{"id":164,"title":"EverNote (https://evernote.com/)"},{"id":165,"title":"ReverbNation/Sonicbids/RedBullSoundSelect (http://www.sonicbids.com)"},{"id":166,"title":"Homie (http://www.homie.co/)"},{"id":167,"title":"Splitwise (https://www.splitwise.com/)"},{"id":168,"title":"Vine (http://www.vine.co)"},{"id":169,"title":"OpenTable (http://www.opentable.com/start/home)"},{"id":170,"title":"Skedula/Engrade (https://www.skedula.com/)"},{"id":171,"title":"New York Times Cooking (http://www.cooking.nytimes.com)"},{"id":172,"title":"CodeShare (http://www.codeshare.io)"},{"id":173,"title":"Various Online Music Apps (http://onlinesequencer.net/)"},{"id":174,"title":"GoFundMe (https://www.gofundme.com)"},{"id":176,"title":"wanikani (https://www.wanikani.com/)"},{"id":177,"title":"other (https://github.com/carsonswope/sports_scheduler.git)"},{"id":178,"title":"Original idea (http://www.gallery.pub)"},{"id":179,"title":"none (http://127.0.0.1/no-clone-here)"},{"id":180,"title":"CodeShare (https://www.codeshare.io)"},{"id":181,"title":"Free and For Sale  (https://www.facebook.com/groups/UCLAfreeandforsale/)"},{"id":182,"title":"none (http://www.thesportscheduler.com)"},{"id":183,"title":"Not a Clone (http://www.pardhaponugoti.com)"},{"id":184,"title":"Not a Clone  (http://pending.nyc)"},{"id":185,"title":"RottenTomatoes (http://www.rottentomatoes.com/)"},{"id":186,"title":"Remember The Milk (http://www.rememberthemilk.com)"},{"id":187,"title":"YouTube (https://www.youtube.com/)"},{"id":188,"title":"NetFlix (https://www.netflix.com/)"},{"id":189,"title":"Robinhood (https://robinhood.com/)"},{"id":190,"title":"Dribbble (https://dribbble.com/)"},{"id":191,"title":"TransferWise  (https://transferwise.com/us/)"},{"id":192,"title":"GeoGuessr (https://geoguessr.com/)"},{"id":193,"title":"TicketLeap (http://www.ticketleap.com/)"},{"id":194,"title":"AnkiApp (https://web.ankiapp.com/#/auth)"},{"id":195,"title":"Piazza (https://piazza.com/)"},{"id":196,"title":"...maybe Hiveworks? (http://www.thehiveworks.com/)"},{"id":197,"title":"...Hiveworks? (http://thehiveworks.com)"},{"id":198,"title":"SurveyMonkey (https://www.surveymonkey.com/)"},{"id":199,"title":"MapMyRun (http://www.mapmyrun.com)"},{"id":200,"title":"i'm sure there is one out there (https://www.bing.com/search?q=pin+board+apps\u0026PC=U316\u0026FORM=CHROMN)"},{"id":201,"title":"Quizlet (http://www.quizlet.com)"},{"id":203,"title":"Strava (http://www.strava.com)"},{"id":204,"title":"Indicative (https://www.indicative.com/)"},{"id":205,"title":"Jounce (http://www.jounce.se/)"},{"id":206,"title":"Indicative (https://app.indicative.com)"},{"id":207,"title":"Behance (https://www.behance.net/)"},{"id":208,"title":"not a clone! (https://climbfyi.herokuapp.com/)"},{"id":209,"title":"Spotify (https://play.spotify.com/)"},{"id":210,"title":"couchsurfing (https://www.couchsurfing.com)"},{"id":211,"title":"google arts \u0026 culture (https://www.google.com/culturalinstitute/beta/)"},{"id":212,"title":"Exposure (http://www.exposure.co)"},{"id":213,"title":"Squarespace (https://www.squarespace.com/)"},{"id":214,"title":"N/A - Original App (https://www.joblogged.com)"},{"id":215,"title":"Food52 (https://food52.com/recipes)"},{"id":216,"title":"Paper and Fabric (http://www.paperandfabric.com)"},{"id":217,"title":"not a clone (https://www.google.com)"},{"id":218,"title":"Original Idea (https://www.fablefood.com)"},{"id":219,"title":"Original Idea (http://www.fablefood.com)"},{"id":220,"title":"Kiva (http://www.kiva.org)"},{"id":221,"title":"N/A (https://crit.herokuapp.com)"},{"id":222,"title":"InstantNotation (http://instantnotation.com/)"},{"id":223,"title":"SmugMug (https://www.smugmug.com/)"},{"id":224,"title":"Hulu (https://www.hulu.com/)"},{"id":225,"title":"Songkick Data With Padmapper Interface (https://www.padmapper.com/)"},{"id":226,"title":"Original with inspiration from sites like: (http://www.igorski.nl/experiment/websid)"},{"id":227,"title":"Glassdoor (https://www.glassdoor.com/index.htm)"},{"id":228,"title":"vevo (https://www.vevo.com/)"},{"id":229,"title":"Roll20 (http://roll20.net)"},{"id":230,"title":"Original with soundcloud interface (https://soundcloud.com)"},{"id":231,"title":"REI (https://www.rei.com/)"},{"id":175,"title":"500px (https://500px.com)"},{"id":232,"title":"Trello (https://trello.com)"},{"id":233,"title":"Google Docs (http://www.docs.google.com)"},{"id":234,"title":"Adobe Color (https://www.color.adobe.com)"},{"id":235,"title":"TypeRacer (http://play.typeracer.com/)"},{"id":236,"title":"Share Grid (http://www.sharegrid.com)"},{"id":237,"title":"Cymbal (https://cymbal.fm/)"},{"id":238,"title":"Skillshare (https://www.skillshare.com/)"},{"id":239,"title":"Toggl (https://toggl.com/)"},{"id":240,"title":"Hipcamp (https://www.hipcamp.com/)"},{"id":241,"title":"MUBI (https://mubi.com/)"},{"id":242,"title":"SlickDeals (https://slickdeals.net/)"},{"id":243,"title":"TimeJoy (http://timejoy.co/)"},{"id":244,"title":"Quora/Instagram mashup (https://www.instagram.com/?hl=en)"},{"id":245,"title":"Shift (https://shift.com)"},{"id":246,"title":"Discord (https://discordapp.com/)"},{"id":247,"title":"Pandora (http://pandora.com)"},{"id":248,"title":"MyAT (https://www.myattendancetracker.com/)"},{"id":249,"title":"Stitcher (https://www.stitcher.com)"},{"id":250,"title":"Spotify (https://open.spotify.com)"},{"id":251,"title":"Plug.dj (https://plug.dj/)"},{"id":252,"title":"Kind of Setlist.fm (http://www.setlist.fm/)"},{"id":253,"title":"Original Idea w/ design inspiration by Spotify. (https://grooviehq.com)"},{"id":254,"title":"Libib (https://www.libib.com/)"},{"id":255,"title":"kickstarter (https://www.kickstarter.com/)"},{"id":256,"title":"BleacherReport (https://bleacherreport.com/)"},{"id":257,"title":"Mixcloud (https://www.mixcloud.com/)"},{"id":258,"title":"MealPal (https://mealpal.com/)"},{"id":259,"title":"Open University Data (https://www.openuniversitydata.org/)"},{"id":260,"title":"DraftKings (https://www.draftkings.com/)"},{"id":261,"title":"massdrop (https://www.massdrop.com)"},{"id":262,"title":"Rover (https://www.rover.com/)"},{"id":263,"title":"Moose Jaw (https://www.moosejaw.com/moosejaw/shop/home____)"},{"id":264,"title":"lish (https://www.lishfood.com)"},{"id":265,"title":"Beyond the Whiteboard  (https://beyondthewhiteboard.com/)"},{"id":266,"title":"Jira (https://www.atlassian.com/software/jira)"},{"id":267,"title":"Seeking Alpha (https://seekingalpha.com/)"},{"id":268,"title":"manastack (https://manastack.com/)"},{"id":269,"title":"ZocDoc (https://www.zocdoc.com)"},{"id":270,"title":"Vibes (https://vibes-fullstack.herokuapp.com/#/)"},{"id":271,"title":"Audible (http://audible.com)"},{"id":272,"title":"Vocabulary.com (https://www.vocabulary.com/)"},{"id":273,"title":"www.songkick.com (https://www.songkick.com/)"},{"id":274,"title":"Stubhub (https://www.stubhub.com)"},{"id":275,"title":"Code Fights (http://www.codefights.com)"},{"id":276,"title":"Facebook Messenger (https://www.messenger.com/)"},{"id":277,"title":"OpenTable (https://www.opentable.com/start/home)"},{"id":278,"title":"Original (http://ashvalejohn-full-stack.herokuapp.com/#/)"},{"id":279,"title":"Kitchen Stories (https://kitchenstories.io/en)"},{"id":280,"title":"Skype (https://web.skype.com/)"},{"id":281,"title":"Pinterest (https://www.pinterest.com/)"},{"id":282,"title":"Grailed (https://www.grailed.com/)"},{"id":283,"title":"Christian Mingle (https://www.christianmingle.com/en-us/)"},{"id":284,"title":"Blue Apron (https://www.blueapron.com/)"}]
+</script>
+
+<script>
+$(function () {
+  $("#clone-selection").cloneSearch();
+});
+</script>
+
+      </section>
+    </main>
+
+    <div class="modal">
+      <div class="cover"></div>
+      <div class="root"></div>
+    </div>
+
+    <script>
+    $(function () {
+      var page = "final-projects";
+      if (page) $("#" + page).addClass("selected");
+
+    });
+    </script>
+
+
+</body></html>
