@@ -1,0 +1,43 @@
+.header {
+  color: #45882F;
+  width: 100vw;
+  text-align: center;
+  font-size: 24px;
+}
+body {
+  background: black;
+  font-family: 'Exo', sans-serif;
+  font-weight: none;
+}
+.charts {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steam-bars {
+  margin: auto;
+  width: 700px;
+  height: 800px;
+  background: #1A1A1A;
+  color: white;
+}
+
+.twitch-balls {
+  margin: auto;
+  background: #1A1A1A;
+}
+
+.twitch-balls-description {
+  color: white;
+  width: 700px;
+  margin-bottom: 0;
+  padding: 10px 0;
+  text-align: center;
+  background: #1A1A1A;
+}
+.twitch-balls-header {
+  color: #4B387A;
+  margin-top: 30px;
+  margin-bottom: 0;
+}

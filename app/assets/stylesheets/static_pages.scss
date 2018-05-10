@@ -4,6 +4,8 @@
 
 .all-things {
   display: flex;
+  font-family: "Merriweather", "Georgia", serif;
+
 }
 .logged-in-nav, .logged-out-nav {
   display: flex;
@@ -36,6 +38,8 @@
   height: 50px;
   cursor: pointer;
   padding: 0 10px;
+  font-family: "Merriweather", "Georgia", serif;
+  
 }
 
 .nav-home:hover {

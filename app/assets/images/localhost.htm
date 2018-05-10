@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./localhost_files/stylesheet.css">
+    <script type="text/javascript" src="./localhost_files/d3.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./localhost_files/bundle.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+  </head>
+  <body style="" class="vsc-initialized">
+    <h1 class="header">SteamBars</h1>
+    <div class="charts">
+      <canvas class="steam-bars" id="steam-bars" style="display: block; height: 350px; width: 700px;" width="1400" height="700"></canvas>
+      <h2 class="twitch-balls-header">TwitchBalls</h2>
+      <h5 class="twitch-balls-description">Top 25 Currently Viewed Games on Twitch</h5>
+      <div id="twitch-balls">
+        <svg class="twitch-balls" width="700" height="400">
+        <circle r="40" transform="translate(350,200)" style="fill: rgb(31, 119, 180);" cx="8.329562711613338" cy="-9.398035165290183"></circle><circle r="24.396877064830093" transform="translate(350,200)" style="fill: rgb(255, 127, 14);" cx="-39.92175137450669" cy="36.823988978369385"></circle><circle r="21.76439351253187" transform="translate(350,200)" style="fill: rgb(44, 160, 44);" cx="-1.292235815737877" cy="-71.04865980573686"></circle><circle r="21.338151776919304" transform="translate(350,200)" style="fill: rgb(214, 39, 40);" cx="38.612772999635716" cy="52.06387732176764"></circle><circle r="19.693138379592284" transform="translate(350,200)" style="fill: rgb(148, 103, 189);" cx="-87.9776884332468" cy="-20.258117946545987"></circle><circle r="17.306671098661887" transform="translate(350,200)" style="fill: rgb(140, 86, 75);" cx="75.68703642901784" cy="-52.12780756534363"></circle><circle r="16.74130795205338" transform="translate(350,200)" style="fill: rgb(227, 119, 194);" cx="-27.487584885838796" cy="99.00309753518104"></circle><circle r="13.635884568143954" transform="translate(350,200)" style="fill: rgb(127, 127, 127);" cx="-63.686654754950574" cy="-82.91385374798737"></circle><circle r="13.447268039774455" transform="translate(350,200)" style="fill: rgb(188, 189, 34);" cx="92.57036385270224" cy="14.483421419808058"></circle><circle r="11.52401182045555" transform="translate(350,200)" style="fill: rgb(23, 190, 207);" cx="-107.30689132156834" cy="45.09041683511484"></circle><circle r="11.33746265571099" transform="translate(350,200)" style="fill: rgb(31, 119, 180);" cx="55.249891324818535" cy="-111.7454194676716"></circle><circle r="11.311559805586747" transform="translate(350,200)" style="fill: rgb(255, 127, 14);" cx="39.83465151523667" cy="114.95443859184228"></circle><circle r="10.807731129226442" transform="translate(350,200)" style="fill: rgb(44, 160, 44);" cx="-147.5996805009564" cy="-67.4995070150529"></circle><circle r="10.807366300351452" transform="translate(350,200)" style="fill: rgb(214, 39, 40);" cx="148.71871651096734" cy="-38.60067493390608"></circle><circle r="10.788760027726994" transform="translate(350,200)" style="fill: rgb(148, 103, 189);" cx="-83.5535863939311" cy="137.42844261893322"></circle><circle r="10.760060156227832" transform="translate(350,200)" style="fill: rgb(140, 86, 75);" cx="-33.942451022913694" cy="-157.6950403769091"></circle><circle r="10.67614951498028" transform="translate(350,200)" style="fill: rgb(227, 119, 194);" cx="132.25119962174438" cy="86.8105748880854"></circle><circle r="10.55101321085893" transform="translate(350,200)" style="fill: rgb(127, 127, 127);" cx="-164.77393673975516" cy="3.4928493641754175"></circle><circle r="10.366896238614299" transform="translate(350,200)" style="fill: rgb(188, 189, 34);" cx="125.5296762447554" cy="-106.37239005871265"></circle><circle r="10.258420453117463" transform="translate(350,200)" style="fill: rgb(23, 190, 207);" cx="-10.129864487874475" cy="165.23678284307465"></circle><circle r="10.21634352286869" transform="translate(350,200)" style="fill: rgb(31, 119, 180);" cx="-104.84309015308722" cy="-130.66194265301806"></circle><circle r="10.134865074121066" transform="translate(350,200)" style="fill: rgb(255, 127, 14);" cx="160.95815033535754" cy="27.87171474852933"></circle><circle r="10.09327458237228" transform="translate(350,200)" style="fill: rgb(44, 160, 44);" cx="-140.13741915058318" cy="93.61081598558823"></circle><circle r="10.003161850249908" transform="translate(350,200)" style="fill: rgb(214, 39, 40);" cx="37.35645288268404" cy="-164.9764140184548"></circle><circle r="10" transform="translate(350,200)" style="fill: rgb(148, 103, 189);" cx="89.44869964404988" cy="141.9510673624277"></circle></svg>
+      <div>
+    </div>
+      <script src="./localhost_files/d3.min(1).js"></script>
+      <script src="./localhost_files/twitch.js"></script>
+      <script>
+        d3.json("https://api.twitch.tv/kraken/games/top?limit=25")
+        .header("Client-ID", "c4xf7iasrivwhmuwvq57rz1l2o3181")
+        .get(function(error, data) {
+          if (error) {
+            console.error('Error getting or parsing the data.');
+            throw error;
+          }
+          var chart = bubbleChart().width(700).height(400);
+          d3.select('#twitch-balls').datum(data).call(chart);
+        });
+      </script>
+  
+
+<div style="position: absolute; visibility: hidden; color: white; padding: 8px; background-color: rgb(75, 56, 122); border-radius: 6px; text-align: center; width: 150px;"></div></div></div></body></html>
