@@ -25,6 +25,7 @@ const App = () => {
       </header>
       <div className="all-things">
         <ProtectedRoute path="/mybooks" component={SideBarContainer}/>
+        <Route exact path="/" component={SideBarContainer}/>
         <Switch>
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />

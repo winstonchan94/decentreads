@@ -4,14 +4,17 @@ import ShelfFormContainer from '../shelf/shelf_form_container';
 class SideBar extends React.Component {
 
   componentDidMount() {
-    this.props.requestShelves(this.props.currentUser.id);
+    if (this.props.currentUser){
+      this.props.requestShelves(this.props.currentUser.id);
+    }
   }
 
 
   render() {
 
     const { shelves } = this.props;
-    if (!this.props.shelves) { return 'loading'; }
+    if (!this.props.currentUser) { return '';}
+    else if (!this.props.shelves) { return 'loading'; }
     else {
       return (
         <nav className="side-bar">
