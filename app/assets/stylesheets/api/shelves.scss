@@ -9,6 +9,18 @@
   border-bottom: 1px solid #d3d3d3;
   padding: 10px 0;
 }
+.ad-list {
+  position: fixed;
+  right: 100px;
+  top: 120px;
+  width: 180px;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 10px 0;
+}
+
+.ad-list-link {
+  text-decoration: none;
+}
 
 .shelf-list {
   margin-top: 5px;
@@ -65,7 +77,7 @@
   background: #F4F1EA;
   font-size: 12px;
   border-radius: 3px;
-  
+
 }
 
 .shelf-form-input {

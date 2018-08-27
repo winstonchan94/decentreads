@@ -1,4 +1,5 @@
 import React from 'react';
+import AdBar from './navigation/ad_bar';
 import NavBarContainer from './navigation/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
@@ -26,6 +27,7 @@ const App = () => {
       <div className="all-things">
         <ProtectedRoute path="/mybooks" component={SideBarContainer}/>
         <Route exact path="/" component={SideBarContainer}/>
+        <Route path="/" component={AdBar}/>
         <Switch>
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
