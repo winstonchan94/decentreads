@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+dimport React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 import BookIndexItem from './book_index_item';
@@ -25,4 +25,4 @@ class BookIndex extends Component {
 }
 
 export default BookIndex;
-//this was pretty goodsssssss
+//this was pretty goodssssssss
