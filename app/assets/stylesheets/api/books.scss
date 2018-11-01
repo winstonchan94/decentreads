@@ -74,7 +74,7 @@
   line-height: 20px;
   font-size: 18px;
   margin-bottom: 20px;
-  height: 300px;
+  height: 190px;
   overflow-y: scroll;
   padding: 0 15px 0 0;
   list-style: none;
@@ -100,7 +100,7 @@
   color: #382110;
   font-weight: bold;
   width: 100px;
-  margin-left: 35%;
+  margin-left: 40%;
 }
 
 .review-form-toggle-button:hover {
@@ -109,7 +109,7 @@
 .review-form-box {
 
   max-width: 25%;
-  margin-left: 30%;
+  margin-left: 24%;
   padding: 10px;
   margin-top: 20px;
   display: flex;
@@ -140,7 +140,7 @@
   }
   .review-form-textarea {
     height: 200px;
-    width: 600px;
+    width: 400px;
     margin-bottom: 10px;
   }
 
@@ -153,7 +153,7 @@
 .reviews-box {
   align-self: center;
   max-width: 40%;
-  margin: auto;
+  margin-left: 25%;
   padding: 10px;
   margin-top: 20px;
 }
