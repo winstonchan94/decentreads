@@ -20,7 +20,9 @@ class ReadStatus extends React.Component {
   update(field) {
     return e => {
       this.setState({[field]: e.currentTarget.value});
+      setTimeout(() => {this.handleSubmit(e);}, 0);
     };
+
   }
 
   showForm() {
@@ -66,11 +68,11 @@ class ReadStatus extends React.Component {
             <option value="" disabled selected>Select Shelf</option>
             {options}
           </select>
-          <input type="submit" value="Add to Shelf" className="read-status-button"/>
+
         </form>
       );
     }
 }
 
-
+//          <input type="submit" value="Add to Shelf" className="read-status-button"/>
 export default ReadStatus;
