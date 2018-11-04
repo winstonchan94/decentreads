@@ -18,6 +18,7 @@ import {
 } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
+//add in a splash page for exact
 const App = () => {
   return (
     <div>
