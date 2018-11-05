@@ -5,6 +5,7 @@ import {
   RECEIVE_SHELVES,
   DELETE_SHELF,
   ADD_SHELVING,
+  REMOVE_SHELVING,
 } from '../actions/shelf_actions';
 
 const shelvesReducer = (state = {}, action) => {
@@ -26,6 +27,10 @@ const shelvesReducer = (state = {}, action) => {
           delete newState[action.shelfToRemoveFrom].bookIds[newState[action.shelfToRemoveFrom].bookIds.indexOf(action.bookId)];
         }
       }
+      return newState;
+    case REMOVE_SHELVING:
+      newState = merge({}, state);
+      delete newState[action.shelfId].bookIds[newState[action.shelfId].bookIds.indexOf(action.bookId)];
       return newState;
     default:
       return state;

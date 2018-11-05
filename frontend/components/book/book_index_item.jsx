@@ -4,10 +4,10 @@ import ReadStatusContainer from './read_status_container';
 
 //add aws paperclip whatever
 
-const BookIndexItem = ( { book, currentUser } ) => {
+const BookIndexItem = ( { book, currentUser, currentShelf } ) => {
   let readStatus;
   if (currentUser) {
-    readStatus = (<ReadStatusContainer className="book-list-status" book={book} />);
+    readStatus = (<ReadStatusContainer className="book-list-status" book={book} currentShelf={currentShelf}/>);
   }
   return (
     <li className="book-index-item" key={book.id}>

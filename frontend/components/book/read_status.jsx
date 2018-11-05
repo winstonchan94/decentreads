@@ -15,6 +15,7 @@ class ReadStatus extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.showForm = this.showForm.bind(this);
     this.hideForm = this.hideForm.bind(this);
+    this.handleBookRemoval = this.handleBookRemoval.bind(this);
   }
 
   update(field) {
@@ -40,9 +41,15 @@ class ReadStatus extends React.Component {
     this.props.processForm(this.state.bookId, this.state.shelfId);
   }
 
+  handleBookRemoval() {
+    this.props.removeBook(this.state.bookId, this.props.currentShelf);
+  }
 
   render() {
-
+    let removeButton;
+    if (this.props.currentShelf) {
+      removeButton = ( <input type="submit" value="Remove" className="read-status-button"/>);
+    }
     const shelves = values(this.props.shelves);
     const defaultShelves = ['Read', 'Currently Reading', "Want to Read"];
     const options = shelves.map((shelf) =>
@@ -63,16 +70,15 @@ class ReadStatus extends React.Component {
     }
       );
       return (
-        <form className="read-status-form" onSubmit={this.handleSubmit}>
+        <form className="read-status-form" onSubmit={this.handleBookRemoval}>
           <select onChange={this.update('shelfId')}>
             <option value="" disabled selected>Select Shelf</option>
             {options}
           </select>
-
+          {removeButton}
         </form>
       );
     }
 }
 
-//          <input type="submit" value="Add to Shelf" className="read-status-button"/>
 export default ReadStatus;
