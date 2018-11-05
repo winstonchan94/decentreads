@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store}/>, root);
 });
 
-window.destroyShelving = destroyShelving; 
-window.addShelving = addShelving;
-window.destroyShelf = destroyShelf;
-window.requestShelf = requestShelf;
-window.requestShelves = requestShelves;
-window.requestBook = requestBook;
-window.requestBooks = requestBooks;
+// window.destroyShelving = destroyShelving; 
+// window.addShelving = addShelving;
+// window.destroyShelf = destroyShelf;
+// window.requestShelf = requestShelf;
+// window.requestShelves = requestShelves;
+// window.requestBook = requestBook;
+// window.requestBooks = requestBooks;

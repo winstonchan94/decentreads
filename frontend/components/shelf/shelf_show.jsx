@@ -6,11 +6,6 @@ import BookShowContainer from '../book/book_show_container';
 
 class ShelfShow extends React.Component {
 
-
-
-
-
-
   componentDidMount() {
     this.props.requestShelf(this.props.shelfId);
   }

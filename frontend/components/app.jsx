@@ -28,7 +28,6 @@ const App = () => {
       <div className="all-things">
         <ProtectedRoute path="/mybooks" component={SideBarContainer}/>
         <Route exact path="/" component={SideBarContainer}/>
-        <Route path="/" component={AdBar}/>
         <Switch>
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
@@ -42,5 +41,6 @@ const App = () => {
     </div>
   );
 };
+//<Route path="/" component={AdBar}/>
 
 export default App;

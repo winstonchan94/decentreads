@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import { logout, login } from '../../actions/session_actions';
 import NavBar from './nav_bar';
 
-const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
-});
+const mapStateToProps = (props) => {
+  return {
+    currentUser: props.session.currentUser
+  };
+};
 
 const demoUser = {email: "demo", password: "password"};
 

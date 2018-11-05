@@ -6,11 +6,14 @@ import {
 } from '../../actions/book_actions';
 import BookIndex from './book_index';
 
-const mapStateToProps = state => ({
-  listType: "Featured Books",
-  books: selectBooks(state),
-  currentUser: state.session.currentUser
-});
+const mapStateToProps = (state, {match}) => {
+  return {
+    listType: "Featured Books",
+    books: selectBooks(state),
+    currentUser: state.session.currentUser,
+    url: match.url,
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   requestBooks: () => dispatch(requestBooks())
