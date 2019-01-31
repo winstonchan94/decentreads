@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-
+import SideBarContainer from '../navigation/side_bar_container';
 import BookIndexItem from '../book/book_index_item';
 import BookShowContainer from '../book/book_show_container';
 
@@ -20,12 +20,15 @@ class ShelfShow extends React.Component {
     const { shelf, books, currentUser } = this.props;
     if (!this.props.books || !this.props.shelf) { return <h5>loading</h5>; } else {
     return (
-      <div className="book-list-box">
-        <h1 className="book-list-name">{this.props.shelf.name}</h1>
-        <ul className="book-list">
-          {this.props.books.reverse().map(book => <BookIndexItem key={book.id} book={book}
-            currentShelf={this.props.shelfId} currentUser={currentUser}/>)}
-        </ul>
+      <div className="main-stuff">
+        <SideBarContainer></SideBarContainer>
+        <div className="book-list-box">
+          <h1 className="book-list-name">{this.props.shelf.name}</h1>
+          <ul className="book-list">
+            {this.props.books.reverse().map(book => <BookIndexItem key={book.id} book={book}
+              currentShelf={this.props.shelfId} currentUser={currentUser}/>)}
+            </ul>
+          </div>
       </div>
     );
     }
