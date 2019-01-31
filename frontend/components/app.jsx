@@ -7,6 +7,7 @@ import BookShowContainer from './book/book_show_container';
 import BookIndexContainer from './book/book_index_container';
 import UserBookIndexContainer from './book/user_book_index_container';
 import SideBarContainer from './navigation/side_bar_container';
+import SplashPageContainer from './navigation/splash_page_container';
 import ShelfShowContainer from './shelf/shelf_show_container';
 import { Provider } from 'react-redux';
 import {
@@ -26,8 +27,7 @@ const App = () => {
         <NavBarContainer />
       </header>
       <div className="all-things">
-        <ProtectedRoute path="/mybooks" component={SideBarContainer}/>
-        <Route exact path="/" component={SideBarContainer}/>
+        <Route exact path = "/" component={SplashPageContainer} />
         <Switch>
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />

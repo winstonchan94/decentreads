@@ -13,7 +13,7 @@ class SideBar extends React.Component {
   render() {
 
     const { shelves } = this.props;
-    if (!this.props.currentUser) { return '';}
+    if (!this.props.currentUser) { return <nav className="side-bar"></nav>;}
     else if (!this.props.shelves) { return 'loading'; }
     else {
       return (
