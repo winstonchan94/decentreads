@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .side-bar {
-  position: fixed;
-  left: 100px;
-  top: 90px;
-  width: 180px;
+  // position: fixed;
+  // left: 100px;
+  // top: 90px;
+  // width: 180px;
   border-bottom: 1px solid #d3d3d3;
   padding: 10px 0;
+  margin-top: 130px;
+  margin-left: 100px;
 }
 .ad-list {
   position: fixed;

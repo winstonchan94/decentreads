@@ -1,22 +1,20 @@
-.book-list-box {
-  text-align: center;
-  width: 1500px;
+.book-list-box{
+  max-width: 900px;
 }
 .book-list-name {
   margin-top: 50px;
   font-size: 36px;
   font-weight: bold;
-
+  margin-left: 28%;
 
 }
 .book-list {
-  width: 50%;
-  max-width: 800px;
+  max-width: 700px;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
-  margin-left: 25%;
+
+  margin-left: 50px;
   margin-top: 40px;
   margin-bottom: 80px;
 }

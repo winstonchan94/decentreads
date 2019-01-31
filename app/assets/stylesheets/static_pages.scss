@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .all-things {
-  display: flex;
+  display: grid;
+  grid-template-columns: .25fr 1fr;
   padding: 50px 0 0 0;
   font-family: "Merriweather", "Georgia", serif;
 
