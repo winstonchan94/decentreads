@@ -6,7 +6,6 @@
   // left: 100px;
   // top: 90px;
   // width: 180px;
-  border-bottom: 1px solid #d3d3d3;
   padding: 10px 0;
   margin-top: 130px;
   margin-left: 100px;
@@ -67,6 +66,11 @@
   margin-right: 5px;
 }
 
+.shelf-form {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d3d3d3;
+
+}
 .shelf-form-button {
   text-align: center;
   padding: 5px 10px;
