@@ -5,7 +5,7 @@ import {
   requestBooks
 } from '../../actions/book_actions';
 import BookIndex from './book_index';
-
+//contains the entity of all the books and information regarding said books in a list
 const mapStateToProps = (state, {match}) => {
   return {
     listType: "Featured Books",

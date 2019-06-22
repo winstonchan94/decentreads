@@ -5,6 +5,7 @@ import { selectBook } from '../../reducers/selectors';
 import BookShow from './book_show';
 
 //destructured from ownProps
+//contains all information of a single book from shelf entity
 const mapStateToProps = (state, { match }) => {
   const bookId = parseInt(match.params.bookId);
   const book = selectBook(state, match.params.bookId);
