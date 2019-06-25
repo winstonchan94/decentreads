@@ -21,7 +21,7 @@ class BookShow extends React.Component {
       this.props.requestBook(nextProps.bookId);
     }
   }
-
+//conditionally render user information such as rating or review if logged in
   render() {
     let reviews = values(this.props.reviews).filter(el => el.bookId == this.props.book.id);
     let reviewList;
