@@ -1,7 +1,7 @@
 import React from 'react';
 import { values } from 'lodash';
 
-
+//Render dropdown menu for read status and ability to change shelves, remove book from shelf 
 
 class ReadStatus extends React.Component {
 
